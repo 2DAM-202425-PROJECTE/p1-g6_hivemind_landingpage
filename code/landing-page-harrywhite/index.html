@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Landing Page Harry White </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* Estils personalitzats */
+        body {
+            background-color: #1e1e1e;
+            font-family: 'Arial', sans-serif;
+            color: #000000;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #fbfbfb;
+        }
+
+        header nav {
+            margin-top: 15px;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #8295e6;
+        }
+
+        .hero {
+            background-color: #feffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            color: #000000;
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            color: #000000;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(81, 75, 75, 0.75);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .scroll-to-top:hover {
+            background-color: rgba(81, 75, 75, 0.75);
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .scroll-to-top {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .icons img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Background images */
+        body[data-bg="1"] {
+            background-image: url('https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?t=st=1728322011~exp=1728325611~hmac=9afd3415042c752b7286a0b19c7e7ba48ffcc46f3a6ff47f70381c134cfeb671&w=996');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+
+    </style>
+</head>
+
+<body data-bg="1">
+<header>
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+        <h1 class="text-3xl font-bold">Harry White</h1>
+        <nav>
+            <a href="index.html">Sobre Mi</a>
+            <a href="projectes.html">Els Meus Projectes</a>
+            <a href="contacte.html">Contacta'm</a>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-grow max-w-4xl mx-auto p-8">
+    <div class="hero animate__animated animate__fadeInUp">
+        <h2 class="text-4xl font-bold mb-4">Sobre Mi</h2>
+        <p class="mb-4">Hola! Soc Harry, un apassionat del desenvolupament d'aplicacions multiplataforma amb experiència en HTML, CSS, JavaScript, i altres tecnologies. M'agrada resoldre problemes complexos, treballar en equip, i crear solucions innovadores per a aplicacions mòbils i web. Estic sempre disposat a aprendre i millorar les meves habilitats en el camp de la programació i les tecnologies de la informació.</p>
+    </div>
+
+    <section class="section my-10">
+        <h2 class="text-3xl font-bold mb-4">Llenguatges i Tools</h2>
+        <p class="mb-4">Conec diversos llenguatges i eines que m'ajuden a crear aplicacions web i mòbils. Aquí teniu els llenguatges i eines que domino:</p>
+        <div class="icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
+        </div>
+    </section>
+
+    <section class="section my-10">
+        <h2 class="text-3xl font-bold mb-4">El meu aprenentatge a SMX i DAM</h2>
+        <p class="mb-4">Durant els meus estudis de SMX i DAM, he après molt sobre desenvolupament web, bases de dades, i gestió de projectes. També he adquirit habilitats en la resolució de problemes i la col·laboració en equips de treball. SMX em va donar una bona base en sistemes informàtics i xarxes, mentre que a DAM estic perfeccionant les meves habilitats en desenvolupament d'aplicacions multiplataforma i la integració amb bases de dades.</p>
+    </section>
+
+    <section class="section my-10">
+        <h2 class="text-3xl font-bold mb-4">Domini en Màquines Virtuals</h2>
+        <p class="mb-4">Tinc experiència utilitzant VirtualBox per crear i gestionar màquines virtuals. Domini la instal·lació i configuració de sistemes operatius com Windows, Linux, i Raspberry Pi en entorns virtuals. Aquestes habilitats em permeten simular entorns reals de treball i provar aplicacions en diferents plataformes de manera eficient.</p>
+    </section>
+</main>
+
+<footer>
+    <div class="max-w-4xl mx-auto">
+        <p>© 2024 Harry White. Tots els drets reservats.</p>
+    </div>
+</footer>
+
+<button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+<script>
+    // Funció per tornar a dalt
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Mostrar el botó de tornar a dalt quan es fa scroll
+    window.onscroll = function () {
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        if (document.documentElement.scrollTop > 200) {
+            scrollToTopBtn.style.display = 'flex';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+
+        // Canviar fons en funció de la posició de desplaçament
+        const scrollPosition = document.documentElement.scrollTop;
+        if (scrollPosition < 800) {
+            document.body.setAttribute('data-bg', '1');
+        } else {
+            document.body.setAttribute('data-bg', '2');
+        }
+    }
+</script>
+
+</body>
+
+</html>

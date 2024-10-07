@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Harry White</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* Estils personalitzats */
+        body {
+            background-image: url('https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?t=st=1728322011~exp=1728325611~hmac=9afd3415042c752b7286a0b19c7e7ba48ffcc46f3a6ff47f70381c134cfeb671&w=996');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff; /* Text color changed to white for better contrast */
+        }
+        header {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+        header nav {
+            margin-top: 15px;
+        }
+        header nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #8295e6;
+        }
+        .hero {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            color: #000000;
+        }
+        .section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            color: #000000;
+        }
+        footer {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(81, 75, 75, 0.75);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .scroll-to-top:hover {
+            background-color: rgba(81, 75, 75, 0.75);
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .scroll-to-top {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.onscroll = function() {
+            const scrollToTopButton = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                scrollToTopButton.style.display = "flex";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        };
+        const sections = document.querySelectorAll(".section");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        });
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</head>
+<body>
+<header>
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+        <h1 class="text-3xl font-bold">Harry White</h1>
+        <nav>
+            <a href="index.html">Sobre Mi</a>
+            <a href="projectes.html">Els Meus Projectes</a>
+            <a href="contacte.html">Contacta'm</a>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-grow max-w-4xl mx-auto p-8">
+    <div class="hero animate__animated animate__fadeInUp">
+        <h2 class="text-4xl font-bold mb-4">Contacta'm</h2>
+        <p class="mb-4">Si tens alguna pregunta o vols posar-te en contacte amb mi, pots fer-ho a través del següent formulari:</p>
+    </div>
+
+    <section class="section my-10">
+        <form action="mailto:harrywhite@iesebre.com" method="post" enctype="text/plain">
+            <div class="mb-4">
+                <label for="name" class="block font-bold mb-2">Nom:</label>
+                <input type="text" id="name" name="name" required class="border border-gray-300 p-2 w-full" />
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block font-bold mb-2">Correu electrònic:</label>
+                <input type="email" id="email" name="email" required class="border border-gray-300 p-2 w-full" />
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block font-bold mb-2">Missatge:</label>
+                <textarea id="message" name="message" required class="border border-gray-300 p-2 w-full" rows="4"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition">Enviar</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="max-w-4xl mx-auto">
+        <p>© 2024 Harry White. Tots els drets reservats.</p>
+    </div>
+</footer>
+
+<button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+</body>
+</html>
