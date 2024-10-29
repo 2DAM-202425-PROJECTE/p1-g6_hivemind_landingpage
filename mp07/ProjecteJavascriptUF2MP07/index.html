@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo Javascript</title>
+    </head>
+    <body>
+        <script>
+          //  const math = require('./mathRequire.js');
+          //  import {suma, resta} from 'mathImport.js';
+           // console.log(math.suma(3,4));
+           // console.log(math.resta(3,4));
+          // console.log(suma(3,4));
+          // console.log(resta(3,4));
+
+            console.log("Hello World!");
+            document.write("Hello World!");
+            //alert("Hello World!");
+            var x = 5;
+            var y = 9;
+            //var suma = x + y;
+            //console.log(suma);
+            console.log(x+y)
+            //Exercici  Escriu un programa JavaScript per trobar l'àrea d'un triangle on tres costats són 5, 6, 7. 
+            const perimetre = (5+6+7)/2
+            let area = Math.sqrt(perimetre * (perimetre - 5) * (perimetre - 6) * (perimetre - 7));
+            console.log("area: "+area)
+            //Exercici mostrar data, hora i minuts
+            let avui = new Date();
+            let dia = avui.getDate();
+            let mes = avui.getMonth()+1;
+            let year = avui.getFullYear();
+            let hores = avui.getHours();
+            let minuts = avui.getMinutes();
+            let segons = avui.getSeconds();
+
+            if(dia < 10) {dia = '0' + dia}
+            if(mes <10) {mes = '0'+ mes}
+            if(hores <10){hores = '0'+hores}
+            if(minuts <10){minuts = '0'+minuts}
+            if(segons <10){segons = '0'+segons}
+
+            let data = mes + '-' + dia + '-' + year+' '+hores+':'+minuts+':'+segons ;
+            console.log(data)
+
+            //Exercici invertir string
+            var cadena = "hola!";
+            console.log(cadena)
+            let invertida = cadena.split("").reverse().join("")
+            console.log(invertida)
+
+            //Exercici punt dins la circumferència
+            var x = 0
+            var y = 0
+            var radi = 5
+            var a = 3
+            var b = 4
+
+            var distanciaAlQuadrat = (a-x)*(a-x)+(b-y)*(b-y)
+            var radiAlQuadrat = radi**2
+
+            if (distanciaAlQuadrat<radiAlQuadrat) {
+                console.log(a+" i "+b+" estan dins del cercle")
+            } else {
+                console.log(a+" i "+b+" NO estan dins del cercle!!!!")
+            }
+
+            //Exercici coincidencies a dos arrays
+            var array1 = [1,2,3,4,5];
+            console.log(array1);
+            var array2 = [2,5,8,9,23];
+            console.log(array2);
+            var coincidencies = array1.filter(value => array2.includes(value));
+            console.log(coincidencies);
+
+            //Exercici passar de decimal a binari
+            var numeroDecimal = 10
+            var numeroBinari = numeroDecimal.toString(2)
+            console.log(`El número ${numeroDecimal} en binari és ${numeroBinari}`)
+
+        </script>
+        <div id="contenidor"></div>
+        <button onclick="agregarParagraf()">Agregar Paràgraf</button>
+        <button onclick="eliminarParagraf()">Eliminar Paràgraf</button>
+        <script>
+            function agregarParagraf() {
+                //creem constant i li assignem un paragraf
+                const newParagraf = document.createElement("p")
+                // assignar un text al paragraf
+                newParagraf.innerText = "Prova paràgraf!!!!!"
+
+                //passem variable al contenidor com a un objecte fill
+                document.getElementById("contenidor").appendChild(newParagraf)
+            }
+            function eliminarParagraf(){
+                // creem variable i agafem el contenidor
+                const contenidor = document.getElementById("contenidor")
+
+                //eliminar paragraf, mirem si es un element fill
+                if (contenidor.lastElementChild) {
+                    //eliminem l'ultim objecte de paragraf
+                    contenidor.removeChild(contenidor.lastElementChild)
+                }
+            }
+        </script>
+
+        <p>Llista de tasques: </p>
+        <input type="text" id="newTask" placeholder="Afegeix una tasca nova">
+        <button onclick="addTask()">Afegeix Tasca</button>
+        <ul id="taskList"></ul>
+        <script>
+            //creem funció
+            function addTask() {
+                //creem variable i li assignem valor 
+                const taskText = document.getElementById("newTask").value;
+
+                //ara mirem si l'usuari posa un valor buit
+                if (taskText === "") return;
+
+                //creem variable per assignar un element li
+                const newTask = document.createElement("li");
+                //assignem text de l'usuari a l'element
+                newTask.innerText = taskText;
+
+                //creem boto d'eliminar
+                const deleteButton = document.createElement("button");
+                // al boto li afegim el text d'eliminar
+                deleteButton.innerText = "Delete";
+                //creem funcio per eliminar l'element pare
+                deleteButton.onclick = function () {
+                    this.parentElement.remove();
+                }
+
+                //afegim boto a la tasca
+                newTask.appendChild(deleteButton);
+
+                //afegir la llista de tasques
+                document.getElementById("taskList").appendChild(newTask);
+
+                document.getElementById("newTask").value = "";
+            }
+        </script>
+        <p>Comptador: <span id="comptador">0</span></p>
+        <button id="incrementar">Incrementar</button>
+        <button id="decrementar">Decrementar</button>
+
+        <script>
+            //creem la variable del comptador i la iniciem a zero
+            let comptador = 0;
+
+            //Creem funcio per modificar el comptador
+            function actualitzarComptador() {
+                //assignem text al comptador
+                document.getElementById("comptador").innerText = comptador;
+            }
+
+            //Creem event per incrementar al boto
+            document.getElementById("incrementar").addEventListener('click', function () {
+                //incrementem valor variable
+                comptador++; 
+                //actualitzem text
+                actualitzarComptador()
+            });
+
+            //Creem event per decrementar al boto
+            document.getElementById("decrementar").addEventListener('click', function () {
+                //decrementem valor variable
+                comptador--;
+                //actualitzem text
+                actualitzarComptador()
+
+            })
+
+        </script>
+    </body>
+</html>
