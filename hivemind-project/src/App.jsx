@@ -259,9 +259,11 @@ function HeroSection() {
 
 function TeamsSection() {
     const teamMembers = [
-        { name: 'John Doe', role: 'CEO', imageUrl: 'path/to/image1.jpg' },
-        { name: 'Jane Smith', role: 'CTO', imageUrl: 'path/to/image2.jpg' },
-        { name: 'Mike Johnson', role: 'CFO', imageUrl: 'path/to/image3.jpg' },
+        { name: 'Radostin Ivanov', role: 'CEO', imageUrl: 'path/to/image1.jpg' },
+        { name: 'Gerard Moreno', role: 'CTO', imageUrl: 'path/to/image2.jpg' },
+        { name: 'Manel Méndez', role: 'CFO', imageUrl: 'path/to/image3.jpg' },
+        { name: 'Harry White', role: 'COO', imageUrl: 'path/to/image4.jpg' },
+
     ];
 
     return (
