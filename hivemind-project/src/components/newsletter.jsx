@@ -7,10 +7,8 @@ function Newsletter() {
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="text-white text-4xl font-extrabold">Subscriu-te al Nostre Butlletí</h2>
                     <div className="my-6">
-                        <p className="text-base text-gray-200 pb-10">Subscriu-te al nostre butlletí i manté't al dia amb
-                            les
-                            últimes notícies, actualitzacions i ofertes exclusives. Obtén informació valuosa. Uneix-te a
-                            la nostra comunitat avui!</p>
+                        <p className="text-base text-gray-200 pb-10">Subscriu-te al nostre butlletí i estigues al dia de les novetats
+                            últimes notícies, actualitzacions i ofertes exclusives. Obteniu informació valuosa. Uneix-te a la nostra comunitat avui!</p>
                     </div>
 
                     <div
