@@ -5,7 +5,9 @@ import FeaturesSection from "./components/features.jsx";
 import NewsLetter from "./components/newsletter.jsx";
 import Testimonis from "./components/testimonis";
 import TeamsSection from "./components/teams.jsx";
-import ProductsContent from './components/products.jsx';   
+import ProductsContent from './components/products.jsx';
+import Contact from './pages/Contact.jsx';
+import Footer from './components/footer.jsx';
 import './index.css';
 
 function App() {
@@ -14,25 +16,31 @@ function App() {
             <div>
                 <NavigationBar />
                 <Routes>
-                    <Route path="/" element={
-                        <>
-                            <HeroSection />
-                            <Testimonis />
-                            <TeamsSection />
-                            <FeaturesSection />
-                            <NewsLetter />
-                        </>
-                    } />
-                    <Route path="/products" element={
-                        <ProductsContent />
-                    } />
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                <HeroSection />
+                                <Testimonis />
+                                <TeamsSection />
+                                <FeaturesSection />
+                                <NewsLetter />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/products"
+                        element={<ProductsContent />}
+                    />
+                    <Route
+                        path="/contact"
+                        element={<Contact />}
+                    />
                 </Routes>
+                <Footer />
             </div>
         </Router>
     );
 }
 
 export default App;
-
-
-

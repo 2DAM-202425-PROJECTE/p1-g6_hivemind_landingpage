@@ -7,7 +7,7 @@ export default function NavigationBar(){
         { name: 'Home', href: '/', current: true },
         { name: 'Productes', href: '/products', current: false },
         { name: 'Blog', href: '#', current: false },
-        { name: 'Contacta\'ns', href: '#', current: false },
+        { name: 'Contacta\'ns', href: '/contact', current: false },
     ]
 
     function classNames(...classes) {
