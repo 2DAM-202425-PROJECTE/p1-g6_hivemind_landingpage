@@ -8,6 +8,7 @@ import TeamsSection from "./components/teams.jsx";
 import ProductsContent from './components/products.jsx';
 import Contact from './pages/Contact.jsx';
 import Footer from './components/footer.jsx';
+import Faqs from './components/faqs.jsx';
 import './index.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                                 <TeamsSection />
                                 <FeaturesSection />
                                 <NewsLetter />
+                                <Faqs />
                             </>
                         }
                     />
