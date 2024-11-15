@@ -11,12 +11,15 @@ import Contact from './pages/Contact.jsx';
 import Profile from './pages/Profile.jsx';
 import Footer from './components/footer.jsx';
 import Faqs from './components/faqs.jsx';
+import CookieBanner from "./components/CookieBanner.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import TermsConditions from "./pages/TermsConditions.jsx";
 import './index.css';
 
 function App() {
     return (
         <Router>
-            <div className="app-container">
+            <div>
                 <NavigationBar />
                 <div className="content">
                     <Routes>
@@ -24,6 +27,7 @@ function App() {
                             path="/"
                             element={
                                 <>
+                                    <CookieBanner />
                                     <HeroSection />
                                     <FeaturesSection />
                                     <TeamsSection />
@@ -41,6 +45,14 @@ function App() {
                         <Route
                             path="/contact"
                             element={<Contact />}
+                        />
+                        <Route
+                            path="/privacy-policy"
+                            element={<PrivacyPolicy />}
+                        />
+                        <Route
+                            path="/terms-of-service"
+                            element={<TermsConditions />}
                         />
                         <Route
                             path="/profile"
