@@ -6,6 +6,7 @@ import NewsLetter from "./components/newsletter.jsx";
 import Testimonis from "./components/testimonis";
 import TeamsSection from "./components/teams.jsx";
 import ProductsContent from './components/products.jsx';
+import CTASection from './components/CTA.jsx';
 import Contact from './pages/Contact.jsx';
 import Footer from './components/footer.jsx';
 import Faqs from './components/faqs.jsx';
@@ -27,6 +28,7 @@ function App() {
                                 <FeaturesSection />
                                 <NewsLetter />
                                 <Faqs />
+                                <CTASection />
                             </>
                         }
                     />

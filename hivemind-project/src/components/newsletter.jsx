@@ -7,16 +7,16 @@ function Newsletter() {
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="text-white text-4xl font-extrabold">Subscriu-te al Nostre Butlletí</h2>
                     <div className="my-6">
-                        <p className="text-base text-gray-200 pb-10">Subscriu-te al nostre butlletí i estigues al dia de les novetats
+                        <p className="text-base text-gray-200 pb-10">Subscriu-te al nostre butlletí i e stigues al dia de les novetats
                             últimes notícies, actualitzacions i ofertes exclusives. Obteniu informació valuosa. Uneix-te a la nostra comunitat avui!</p>
                     </div>
 
                     <div
                         className="max-w-2xl left-0 right-0 mx-auto w-full p-5 flex items-center bg-white/20 rounded shadow-lg absolute -bottom-20  ">
                         <input type="email" placeholder="Introdueix el teu correu electrònic"
-                               className="w-full bg-red py-3.5 px-4 text-gray-900 placeholder-gray-700 bg-white/20 text-base focus:outline-none"/>
+                               className="w-full bg-red py-3.5 px-4 text-gray-900 placeholder-gray-700 bg-white/20 rounded-tl-lg rounded-bl-lg text-base focus:outline-none"/>
                         <button
-                            className="bg-[#a91079] hover:bg-[#a91079e2] text-white text-base font-semibold tracking-wide py-3.5 px-8 focus:outline-none">
+                            className="bg-[#a91079] hover:bg-[#a91079e2] text-white text-base font-semibold tracking-wide py-3.5 rounded-tr-lg rounded-br-lg px-8 focus:outline-none">
                             Subscriu&#8209;te
                         </button>
                     </div>
