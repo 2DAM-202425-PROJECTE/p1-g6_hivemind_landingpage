@@ -5,7 +5,8 @@ import FeaturesSection from "./components/features.jsx";
 import NewsLetter from "./components/newsletter.jsx";
 import Testimonis from "./components/testimonis";
 import TeamsSection from "./components/teams.jsx";
-import ProductsContent from './components/products.jsx';
+import ProductsContent from './pages/Products.jsx';
+import CTASection from './components/CTA.jsx';
 import Contact from './pages/Contact.jsx';
 import Profile from './pages/Profile.jsx';
 import Footer from './components/footer.jsx';
@@ -24,11 +25,12 @@ function App() {
                             element={
                                 <>
                                     <HeroSection />
-                                    <Testimonis />
-                                    <TeamsSection />
                                     <FeaturesSection />
-                                    <NewsLetter />
+                                    <TeamsSection />
+                                    <Testimonis />
                                     <Faqs />
+                                    <NewsLetter />
+                                    <CTASection />
                                 </>
                             }
                         />

@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress">
-      <change afterPath="$PROJECT_DIR$/hivemind-project/src/pages/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hivemind-project/src/components/CTA.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hivemind-project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/hivemind-project/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hivemind-project/src/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/hivemind-project/src/components/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hivemind-project/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/hivemind-project/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hivemind-project/src/components/features.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/hivemind-project/src/components/features.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hivemind-project/src/components/newsletter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/hivemind-project/src/components/newsletter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hivemind-project/src/components/products.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hivemind-project/src/components/teams.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/hivemind-project/src/components/teams.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hivemind-project/src/components/testimonis.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/hivemind-project/src/components/testimonis.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hivemind-project/src/pages/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/hivemind-project/src/pages/Products.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +58,7 @@
   "keyToString": {
     "Node.js.App.jsx.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "javascript.nodejs.core.library.configured.version": "18.19.1",
     "javascript.nodejs.core.library.typings.version": "18.19.64",
     "last_opened_file_path": "/home/alumnat/backup/p1-g6_hivemind_landingpage",
@@ -88,7 +92,7 @@
       <workItem from="1729705299234" duration="6218000" />
       <workItem from="1731087616252" duration="1460000" />
       <workItem from="1731662679202" duration="195000" />
-      <workItem from="1731688075607" duration="4094000" />
+      <workItem from="1731688075607" duration="4781000" />
     </task>
     <task id="LOCAL-00001" summary="in progress">
       <option name="closed" value="true" />

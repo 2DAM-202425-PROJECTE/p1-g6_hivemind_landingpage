@@ -4,23 +4,23 @@ export default function FeaturesSection() {
     const features = [
         {
             icon: Cpu,
-            title: "lorem ipsum dolor sit",
-            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Tecnologia innovadora",
+            description: "HiveMind Nexxus utilitza la tecnologia més avançada per oferir una experiència fluida, segura i personalitzada als seus usuaris."
         },
         {
             icon: Globe,
-            title: "lorem ipsum dolor sit",
-            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Connexions globals",
+            description: "Uneix-te a una comunitat global d'usuaris amb interessos compartits, i connecta't amb persones de tot el món."
         },
         {
             icon: Palette,
-            title: "lorem ipsum dolor sit",
-            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Disseny personalitzable",
+            description: "Personalitza el teu perfil amb temes únics, emojis exclusius i accessoris que reflecteixen la teva personalitat."
         },
         {
             icon: Users,
-            title: "lorem ipsum dolor sit",
-            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."  
+            title: "Comunitat activa",
+            description: "Gaudeix d'una comunitat vibrant amb funcions socials com missatgeria, publicacions i esdeveniments interactius."
         }
     ]
 
@@ -30,16 +30,16 @@ export default function FeaturesSection() {
                 <div className="flex flex-col lg:flex-row gap-12">
                     <div className="lg:w-1/3">
                         <h2 className="text-4xl font-extrabold text-white mb-6">
-                            LOREM IPSUM DOLOR SIT
+                            Característiques destacades
                         </h2>
                         <p className="text-xl text-black mb-8">
-                            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            HiveMind Nexxus redefineix la manera com connectem amb les nostres comunitats. Descobreix les seves funcionalitats avançades dissenyades per millorar la teva experiència social.
                         </p>
                         <a
                             href="#"
                             className="inline-block bg-primary text-white font-semibold py-3 px-6 rounded-full hover:bg-primary-dark transition-colors duration-300"
                         >
-                            Learn More
+                            Descobreix més
                         </a>
                     </div>
                     <div className="lg:w-2/3 grid gap-8 md:grid-cols-2">
