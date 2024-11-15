@@ -8,6 +8,7 @@ import TeamsSection from "./components/teams.jsx";
 import ProductsContent from './pages/Products.jsx';
 import CTASection from './components/CTA.jsx';
 import Contact from './pages/Contact.jsx';
+import Profile from './pages/Profile.jsx';
 import Footer from './components/footer.jsx';
 import Faqs from './components/faqs.jsx';
 import CookieBanner from "./components/CookieBanner.jsx";
@@ -20,39 +21,45 @@ function App() {
         <Router>
             <div>
                 <NavigationBar />
-                <Routes>
-                    <Route
-                        path="/"
-                        element={
-                            <>
-                                <CookieBanner />
-                                <HeroSection />
-                                <FeaturesSection />
-                                <TeamsSection />
-                                <Testimonis />
-                                <Faqs />
-                                <NewsLetter />
-                                <CTASection />
-                            </>
-                        }
-                    />
-                    <Route
-                        path="/products"
-                        element={<ProductsContent />}
-                    />
-                    <Route
-                        path="/contact"
-                        element={<Contact />}
-                    />
-                    <Route
-                        path="/privacy-policy"
-                        element={<PrivacyPolicy />}
-                    />
-                    <Route
-                        path="/terms-of-service"
-                        element={<TermsConditions />}
-                    />
-                </Routes>
+                <div className="content">
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <>
+                                    <CookieBanner />
+                                    <HeroSection />
+                                    <FeaturesSection />
+                                    <TeamsSection />
+                                    <Testimonis />
+                                    <Faqs />
+                                    <NewsLetter />
+                                    <CTASection />
+                                </>
+                            }
+                        />
+                        <Route
+                            path="/products"
+                            element={<ProductsContent />}
+                        />
+                        <Route
+                            path="/contact"
+                            element={<Contact />}
+                        />
+                        <Route
+                            path="/privacy-policy"
+                            element={<PrivacyPolicy />}
+                        />
+                        <Route
+                            path="/terms-of-service"
+                            element={<TermsConditions />}
+                        />
+                        <Route
+                            path="/profile"
+                            element={<Profile />}
+                        />
+                    </Routes>
+                </div>
                 <Footer />
             </div>
         </Router>

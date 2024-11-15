@@ -19,15 +19,16 @@
     position: relative;
     z-index: -2;
 }
+
 .form-transparent {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     backdrop-filter: blur(10px);
 }
 
 .form-transparent input,
 .form-transparent textarea {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
 }
 
@@ -46,3 +47,26 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.bg-transparent {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+nav {
+  margin-top: 20px; /* Space between the top and the nav bar */
+  margin-bottom: 20px; /* Space between the nav bar and the body */
+}

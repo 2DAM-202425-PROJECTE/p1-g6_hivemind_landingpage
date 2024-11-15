@@ -3,24 +3,24 @@ import '../App.css';
 const testimonials = [
     {
         name: "Maria Samntha",
-        profession: "Web Developer",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.",
-        image: "path/to/maria.jpg", // Replace with the actual path to the image
-        rating: 4.5,
+        profession: "Social influencer",
+        text: "I am having the best customer experience with this company. They are very professional and always deliver on time.",
+        image: "https://www.famousbirthdays.com/headshots/maria-samantha-de-leon-1.jpg", // Replace with the actual path to the image
+        rating: 5,
     },
     {
         name: "Lisa Cudrow",
         profession: "Graphic Designer",
-        text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.",
-        image: "path/to/lisa.jpg", // Replace with the actual path to the image
+        text: "The services are at very affordable price and the quality is top-notch. I would recommend this company to everyone.",
+        image: "https://cdn.britannica.com/62/248562-050-310A83C9/Lisa-Kudrow-Friends.jpg?w=400&h=300&c=crop", // Replace with the actual path to the image
         rating: 5,
     },
     {
         name: "John Smith",
-        profession: "Marketing Specialist",
-        text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
-        image: "path/to/john.jpg", // Replace with the actual path to the image
-        rating: 4,
+        profession: "Software Engineer",
+        text: "They are very professional with their API services and the documentation is very detailed. I am very happy with their services.",
+        image: "https://cdn-images.dzcdn.net/images/artist/086f50bb1ce0e3033634e5e9c2d75462/1900x1900-000000-80-0-0.jpg", // Replace with the actual path to the image
+        rating: 5,
     },
 ];
 

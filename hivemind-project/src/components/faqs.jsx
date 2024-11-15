@@ -3,20 +3,20 @@ import React, { useState } from 'react';
 
 const faqsData = [
     {
-        question: "What is Hivemind?",
-        answer: "Hivemind is a platform that allows you to manage and collaborate with your team efficiently."
+        question: "Què és Hivemind?",
+        answer: "Hivemind és una plataforma que et permet gestionar i col·laborar amb el teu equip de manera eficient."
     },
     {
-        question: "How do I register?",
-        answer: "You can register by clicking on the 'Registra't gratuïtament' button on the homepage."
+        question: "Com em registro?",
+        answer: "Pots registrar-te fent clic al botó 'Registra't gratuïtament' a la pàgina d'inici."
     },
     {
-        question: "Is there a free trial available?",
-        answer: "Yes, we offer a 14-day free trial for all new users."
+        question: "Hi ha una prova gratuïta disponible?",
+        answer: "Sí, oferim una prova gratuïta de 14 dies per a tots els usuaris nous."
     },
     {
-        question: "How can I contact support?",
-        answer: "You can contact support by emailing support@hivemind.com."
+        question: "Com puc contactar amb el suport?",
+        answer: "Pots contactar amb el suport enviant un correu electrònic a support@hivemind.com."
     }
 ];
 
@@ -30,7 +30,7 @@ const Faqs = () => {
     return (
         <section className="py-20 bg-gradient-to-br bg-transparent backdrop-blur-3xl rounded-3xl mt-10">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-extrabold text-white mb-6">Frequently Asked Questions</h2>
+                <h2 className="text-4xl font-extrabold text-white mb-6">Preguntes freqüents</h2>
                 <div className="space-y-4">
                     {faqsData.map((faq, index) => (
                         <div key={index} className="bg-white/20 p-6 rounded-2xl shadow-lg mb-4">
