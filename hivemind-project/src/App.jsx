@@ -7,6 +7,7 @@ import Testimonis from "./components/testimonis";
 import TeamsSection from "./components/teams.jsx";
 import ProductsContent from './components/products.jsx';
 import Contact from './pages/Contact.jsx';
+import Profile from './pages/Profile.jsx';
 import Footer from './components/footer.jsx';
 import Faqs from './components/faqs.jsx';
 import './index.css';
@@ -14,31 +15,37 @@ import './index.css';
 function App() {
     return (
         <Router>
-            <div>
+            <div className="app-container">
                 <NavigationBar />
-                <Routes>
-                    <Route
-                        path="/"
-                        element={
-                            <>
-                                <HeroSection />
-                                <Testimonis />
-                                <TeamsSection />
-                                <FeaturesSection />
-                                <NewsLetter />
-                                <Faqs />
-                            </>
-                        }
-                    />
-                    <Route
-                        path="/products"
-                        element={<ProductsContent />}
-                    />
-                    <Route
-                        path="/contact"
-                        element={<Contact />}
-                    />
-                </Routes>
+                <div className="content">
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <>
+                                    <HeroSection />
+                                    <Testimonis />
+                                    <TeamsSection />
+                                    <FeaturesSection />
+                                    <NewsLetter />
+                                    <Faqs />
+                                </>
+                            }
+                        />
+                        <Route
+                            path="/products"
+                            element={<ProductsContent />}
+                        />
+                        <Route
+                            path="/contact"
+                            element={<Contact />}
+                        />
+                        <Route
+                            path="/profile"
+                            element={<Profile />}
+                        />
+                    </Routes>
+                </div>
                 <Footer />
             </div>
         </Router>
