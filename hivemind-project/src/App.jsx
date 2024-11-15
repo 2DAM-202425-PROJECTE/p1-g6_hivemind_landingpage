@@ -10,6 +10,9 @@ import CTASection from './components/CTA.jsx';
 import Contact from './pages/Contact.jsx';
 import Footer from './components/footer.jsx';
 import Faqs from './components/faqs.jsx';
+import CookieBanner from "./components/CookieBanner.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import TermsConditions from "./pages/TermsConditions.jsx";
 import './index.css';
 
 function App() {
@@ -22,6 +25,7 @@ function App() {
                         path="/"
                         element={
                             <>
+                                <CookieBanner />
                                 <HeroSection />
                                 <FeaturesSection />
                                 <TeamsSection />
@@ -39,6 +43,14 @@ function App() {
                     <Route
                         path="/contact"
                         element={<Contact />}
+                    />
+                    <Route
+                        path="/privacy-policy"
+                        element={<PrivacyPolicy />}
+                    />
+                    <Route
+                        path="/terms-of-service"
+                        element={<TermsConditions />}
                     />
                 </Routes>
                 <Footer />
