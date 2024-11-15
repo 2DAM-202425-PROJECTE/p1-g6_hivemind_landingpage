@@ -6,7 +6,6 @@ export default function ProductsContent() {
         <div className="hero-background" />
         <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
           <Link to="/">
-            <span>&lt; back</span>
           </Link>
           <h1 className="text-4xl">Products</h1>
           <p className="mt-6 text-xl text-center w-full">
