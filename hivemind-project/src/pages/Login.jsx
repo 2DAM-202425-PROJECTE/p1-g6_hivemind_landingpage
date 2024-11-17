@@ -34,7 +34,7 @@ const Login = () => {
             </div>
     
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-              <form action="#" method="POST" className="space-y-6">
+              <form action="/" method="POST" className="space-y-6">
                 <div>
                     <div className="flex items-center justify-between">
                         <label htmlFor="username" className="block text-sm/6 font-medium text-gray-900">
@@ -79,8 +79,7 @@ const Login = () => {
                     <div>
                     <button
                         type="submit"
-                        className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
+                        className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                         Inicia sessio
                     </button>
                     </div>
