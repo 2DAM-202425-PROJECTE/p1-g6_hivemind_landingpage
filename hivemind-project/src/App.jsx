@@ -9,12 +9,14 @@ import ProductsContent from './pages/Products.jsx';
 import CTASection from './components/CTA.jsx';
 import Contact from './pages/Contact.jsx';
 import Profile from './pages/Profile.jsx';
+import Login from './pages/Login.jsx';
 import Footer from './components/footer.jsx';
 import Faqs from './components/faqs.jsx';
 import CookieBanner from "./components/CookieBanner.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsConditions from "./pages/TermsConditions.jsx";
 import './index.css';
+import Register from "./pages/Register.jsx";
 
 function App() {
     return (
@@ -57,6 +59,14 @@ function App() {
                         <Route
                             path="/profile"
                             element={<Profile />}
+                        />
+                        <Route
+                            path="/login"
+                            element={<Login />}
+                        />
+                        <Route
+                            path="/register"
+                            element={<Register />}
                         />
                     </Routes>
                 </div>

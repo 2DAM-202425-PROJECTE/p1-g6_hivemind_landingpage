@@ -108,7 +108,7 @@ export default function NavigationBar() {
                               </MenuItem>
                             <MenuItem><a href="#" className="block px-4 py-2 text-sm text-white">Settings</a>
                                 </MenuItem>
-                             <MenuItem><a href="#" className="block px-4 py-2 text-sm text-white">Sign out</a>
+                             <MenuItem><a href="/login" className="block px-4 py-2 text-sm text-white">Sign in</a>
                                 </MenuItem>
 <                           /MenuItems>
                         </Menu>
