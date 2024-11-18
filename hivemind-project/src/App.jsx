@@ -21,12 +21,12 @@ function App() {
         <Router>
             <div>
                 <NavigationBar />
+                <CookieBanner />
                     <Routes>
                         <Route
                             path="/"
                             element={
                                 <>
-                                    <CookieBanner />
                                     <HeroSection />
                                     <FeaturesSection />
                                     <TeamsSection />
