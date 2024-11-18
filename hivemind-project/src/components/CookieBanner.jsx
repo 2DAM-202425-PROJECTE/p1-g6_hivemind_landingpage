@@ -55,7 +55,7 @@ const CookieBanner = () => {
         <div
             className={`fixed bottom-4 right-4 bg-gradient-to-br bg-transparent backdrop-blur-3xl shadow-lg rounded-xl p-4 z-50 w-min h-min flex flex-col justify-between`}
         >
-            <div className="flex justify-between items-start flex-col h-full">
+            <div className="flex justify-between items-start flex-col">
                 <div className="text-lg text-white">
                     {!showSettings ? (
                         <>
@@ -63,7 +63,7 @@ const CookieBanner = () => {
                             <a href="/privacy-policy" className="text-blue-500 underline hover:text-blue-700">política de privacitat.</a>.
                         </>
                     ) : (
-                        <div className="text-sm text-gray-700">
+                        <div className="text-sm text-white">
                             <p>Configura les cookies que desitges acceptar:</p>
                             {/* Aquí van les opcions per triar quines cookies acceptar */}
                             <div className="mt-2 space-y-2">
