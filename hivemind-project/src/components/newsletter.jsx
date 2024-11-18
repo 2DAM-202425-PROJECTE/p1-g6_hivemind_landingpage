@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Newsletter() {
+    // Estado para almacenar el correo electrónico
+    const [email, setEmail] = useState('');
+    // Estado para manejar el mensaje de éxito o error
+    const [message, setMessage] = useState('');
+
+    // Maneja el cambio en el input de correo
+    const handleChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+    // Maneja el envío del formulario
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Validación básica del correo electrónico
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (email && emailPattern.test(email)) {
+            // Aquí iría la lógica de envío, por ejemplo, una llamada a una API para registrar el correo
+            setMessage('Gràcies per subscriure’t al nostre butlletí!');
+            setEmail('');
+        } else {
+            setMessage('Si us plau, introdueix un correu electrònic vàlid.');
+        }
+    };
+
     return (
         <section className="py-20 backdrop-blur-3xl rounded-3xl mt-10">
             <div className="from-teal-700 via-teal-600 to-teal-700 relative font-[sans-serif]">
@@ -19,6 +44,8 @@ function Newsletter() {
                         className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto w-full p-4 sm:p-5 bg-white/20 rounded-3xl shadow-lg">
                         <input
                             type="email"
+                            value={email}
+                            onChange={handleChange}
                             placeholder="Introdueix el teu correu electrònic"
                             className="w-full bg-white/20 py-3 px-4 text-gray-900 placeholder-gray-700 rounded-3xl text-sm sm:text-base focus:outline-none"
                         />
@@ -27,6 +54,13 @@ function Newsletter() {
                             Subscriu&#8209;te
                         </button>
                     </div>
+
+                    {/* Mostrar el mensaje de éxito o error */}
+                    {message && (
+                        <div className="mt-4 text-white font-semibold">
+                            {message}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

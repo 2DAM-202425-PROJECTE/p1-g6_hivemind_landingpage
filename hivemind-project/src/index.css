@@ -62,10 +62,6 @@ html, body, #root {
   min-height: 100vh;
 }
 
-.content {
-  flex: 1;
-}
-
 nav {
   margin-top: 20px; /* Space between the top and the nav bar */
   margin-bottom: 20px; /* Space between the nav bar and the body */

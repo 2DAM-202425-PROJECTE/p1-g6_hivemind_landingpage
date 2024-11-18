@@ -23,13 +23,12 @@ function App() {
         <Router>
             <div>
                 <NavigationBar />
-                <div className="content">
+                <CookieBanner />
                     <Routes>
                         <Route
                             path="/"
                             element={
                                 <>
-                                    <CookieBanner />
                                     <HeroSection />
                                     <FeaturesSection />
                                     <TeamsSection />
@@ -71,7 +70,6 @@ function App() {
                     </Routes>
                 </div>
                 <Footer />
-            </div>
         </Router>
     );
 }
