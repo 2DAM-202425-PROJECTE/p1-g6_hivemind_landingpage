@@ -30,12 +30,12 @@ function App() {
                             element={
                                 <>
                                     <HeroSection />
-                                    <FeaturesSection />
-                                    <TeamsSection />
-                                    <Testimonis />
-                                    <Faqs />
-                                    <NewsLetter />
                                     <CTASection />
+                                    <FeaturesSection />
+                                    <NewsLetter />
+                                    <Testimonis />
+                                    <TeamsSection />
+                                    <Faqs />
                                 </>
                             }
                         />

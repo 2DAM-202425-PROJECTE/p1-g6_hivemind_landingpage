@@ -40,8 +40,12 @@ function Newsletter() {
                         </p>
                     </div>
 
-                    <div
-                        className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto w-full p-4 sm:p-5 bg-white/20 rounded-3xl shadow-lg">
+//<<<<<<< login-and-register-system
+//                    <div
+//                        className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto w-full p-4 sm:p-5 bg-white/20 rounded-3xl shadow-lg">
+//=======
+//                    <div className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto w-full p-4 sm:p-5 bg-white/20 rounded shadow-lg">
+//>>>>>>> main
                         <input
                             type="email"
                             value={email}
@@ -50,7 +54,12 @@ function Newsletter() {
                             className="w-full bg-white/20 py-3 px-4 text-gray-900 placeholder-gray-700 rounded-3xl text-sm sm:text-base focus:outline-none"
                         />
                         <button
-                            className="w-full sm:w-auto bg-[#a91079] hover:bg-[#a91079e2] text-white text-sm sm:text-base font-semibold tracking-wide py-3 rounded-3xl px-6 focus:outline-none">
+//<<<<<<< login-and-register-system
+//                            className="w-full sm:w-auto bg-[#a91079] hover:bg-[#a91079e2] text-white text-sm sm:text-base font-semibold tracking-wide py-3 rounded-3xl px-6 focus:outline-none">
+//=======
+//                            onClick={handleSubmit}
+//                            className="w-full sm:w-auto bg-[#a91079] hover:bg-[#a91079e2] text-white text-sm sm:text-base font-semibold tracking-wide py-3 rounded-lg sm:rounded-tr-lg sm:rounded-br-lg px-6 focus:outline-none">
+//>>>>>>> main
                             Subscriu&#8209;te
                         </button>
                     </div>
