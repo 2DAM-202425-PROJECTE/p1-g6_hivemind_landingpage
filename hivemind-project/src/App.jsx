@@ -21,7 +21,6 @@ function App() {
         <Router>
             <div>
                 <NavigationBar />
-                <div className="content">
                     <Routes>
                         <Route
                             path="/"
@@ -61,7 +60,6 @@ function App() {
                     </Routes>
                 </div>
                 <Footer />
-            </div>
         </Router>
     );
 }
