@@ -25,15 +25,15 @@ export default function FeaturesSection() {
     ]
 
     return (
-        <section className="py-20 bg-gradient-to-br bg-transparent backdrop-blur-3xl rounded-3xl mt-10">
+        <section className="py-20 backdrop-blur-3xl rounded-3xl mt-10">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-12">
                     <div className="lg:w-1/3">
                         <h2 className="text-4xl font-extrabold text-white mb-6">
                             Característiques destacades
                         </h2>
-                        <p className="text-xl text-black mb-8">
-                            HiveMind Nexxus redefineix la manera com connectem amb les nostres comunitats. Descobreix les seves funcionalitats avançades dissenyades per millorar la teva experiència social.
+                        <p className="text-xl text-white mb-8">
+                            HiveMind redefineix la manera com connectem amb les nostres comunitats. Descobreix les seves funcionalitats avançades dissenyades per millorar la teva experiència social.
                         </p>
                         <a
                             href="#"
@@ -51,8 +51,8 @@ export default function FeaturesSection() {
                                 }`}
                             >
                                 <feature.icon className="w-12 h-12 text-primary mb-6" />
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                                <p className="text-black text-lg">{feature.description}</p>
+                                <h3 className="text-2xl font-bold text-[#f822b4] mb-4">{feature.title}</h3>
+                                <p className="text-white text-lg">{feature.description}</p>
                             </div>
                         ))}
                     </div>

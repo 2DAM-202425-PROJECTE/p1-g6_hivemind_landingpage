@@ -28,7 +28,7 @@ const Faqs = () => {
     };
 
     return (
-        <section className="py-20 bg-gradient-to-br bg-transparent backdrop-blur-3xl rounded-3xl mt-10">
+        <section className="py-20 backdrop-blur-3xl rounded-3xl mt-10">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-extrabold text-white mb-6">Preguntes freqüents</h2>
                 <div className="space-y-4">

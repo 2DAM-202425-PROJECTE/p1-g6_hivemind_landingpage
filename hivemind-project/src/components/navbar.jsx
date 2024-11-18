@@ -14,7 +14,7 @@ export default function NavigationBar() {
     }
 
     return (
-        <Disclosure as="nav" className="bg-black/60 rounded-3xl mt-2 w-5/6 mx-auto backdrop-blur-2xl sticky top-2 z-10">
+        <Disclosure as="nav" className="bg-black/60 rounded-3xl mt-2 w-5/6 mx-auto backdrop-blur-2xl sticky top-2 z-20">
             <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -22,7 +22,7 @@ export default function NavigationBar() {
                             {({ open }) => (
                                 <>
                                     <Disclosure.Button
-                                        className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                        className="inline-flex items-center justify-center rounded-3xl p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                                     >
                                         <span className="sr-only">Open main menu</span>
                                         {open ? (
@@ -31,7 +31,7 @@ export default function NavigationBar() {
                                             <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                                         )}
                                     </Disclosure.Button>
-                                    <Disclosure.Panel className="absolute left-0 z-10 mt-72 w-48 rounded-lg bg-gray-800 shadow-lg">
+                                    <Disclosure.Panel className="absolute left-0 z-10 mt-72 w-48 rounded-3xl bg-gray-800 shadow-lg">
                                         <div className="space-y-1 px-2 pb-3 pt-2">
                                             {navigation.map((item) => (
                                                 <Disclosure.Button
@@ -102,13 +102,13 @@ export default function NavigationBar() {
                                     />
                                 </MenuButton>
                             </div>
-                            <MenuItems className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-black py-1 shadow-lg ring-1 ring-white ring-opacity-5">
+                            <MenuItems className="absolute right-0 mt-2 w-48 origin-top-right rounded-3xl bg-black py-1 shadow-lg ring-1 ring-white ring-opacity-5">
                               <MenuItem>
                                  <a href="/profile" className="block px-4 py-2 text-sm text-white">Your Profile</a>
                               </MenuItem>
                             <MenuItem><a href="#" className="block px-4 py-2 text-sm text-white">Settings</a>
                                 </MenuItem>
-                             <MenuItem><a href="#" className="block px-4 py-2 text-sm text-white">Sign out</a>
+                             <MenuItem><a href="/login" className="block px-4 py-2 text-sm text-white">Sign in</a>
                                 </MenuItem>
 <                           /MenuItems>
                         </Menu>

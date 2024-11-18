@@ -1,9 +1,9 @@
 function cta() {
     return (
-        <section className="py-20 bg-gradient-to-br bg-transparent backdrop-blur-3xl rounded-3xl mt-10">
+        <section className="py-20 backdrop-blur-3xl rounded-3xl mt-10">
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h2 className="text-sm sm:text-base font-semibold text-[#a91079] tracking-wide uppercase">
-                    Descobreix HiveMind Nexxus
+                    Descobreix Nexxus
                 </h2>
                 <p className="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-100 sm:tracking-tight">
                     La teva comunitat, <span className="text-[#a91079]">més connectada que mai</span>

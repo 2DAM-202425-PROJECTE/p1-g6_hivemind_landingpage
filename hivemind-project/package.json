@@ -8,13 +8,21 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite",
+    "frontend": "npm run dev",
+    "backend": "npm start --prefix server",
+    "start-all": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "dependencies": {
     "@headlessui/react": "^2.1.10",
     "@heroicons/react": "^2.1.5",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
     "emailjs-com": "^3.2.0",
+    "express": "^4.21.1",
     "lucide-react": "^0.454.0",
+    "mongoose": "^8.8.1",
+    "nodemon": "^3.1.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0"
@@ -25,6 +33,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
     "eslint": "^9.13.0",
     "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^5.0.0",

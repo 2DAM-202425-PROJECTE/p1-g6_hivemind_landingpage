@@ -51,9 +51,12 @@ const Contact = () => {
     return (
         <div className="relative">
             <div className="hero-background" />
-            <div className="container mx-auto px-4 py-12">
-                <h2 className="text-3xl font-semibold text-center mb-8 text-white">Contacts</h2>
-                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-lg shadow-lg form-transparent">
+            <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
+                <h2 className="text-3xl text-white text-center mb-10 font-bold">Contacte</h2>
+                <p className="mt-6 text-xl text-center w-full text-white mb-6">
+                    Contacta amb nosaltres per a qualsevol dubte o suggeriment. Estarem encantats d'ajudar-te!
+                </p>
+                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg form-transparent">
                     <div className="mb-4">
                         <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
                             Nom
@@ -64,8 +67,8 @@ const Contact = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Nom"
+                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="ex. John Doe"
                             required
                         />
                         {errors.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
@@ -80,8 +83,8 @@ const Contact = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Correu electrònic"
+                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="ex. jdoe@hivemind.com"
                             required
                         />
                         {errors.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
@@ -95,7 +98,7 @@ const Contact = () => {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                             rows="5"
                             placeholder="Missatge"
                             required
@@ -105,7 +108,7 @@ const Contact = () => {
                     <div className="flex items-center justify-between">
                         <button
                             type="submit"
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline w-full"
                         >
                             Enviar
                         </button>
