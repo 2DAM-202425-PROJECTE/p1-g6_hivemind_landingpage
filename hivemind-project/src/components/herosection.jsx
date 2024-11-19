@@ -30,9 +30,6 @@ export default function HeroSection() {
                                 >
                                     Descobreix més<span aria-hidden="true"> →</span>
                                 </a>
-                                <Button theme="pink">
-                                    Pink theme
-                                </Button>
                             </div>
                         </div>
                     </div>
