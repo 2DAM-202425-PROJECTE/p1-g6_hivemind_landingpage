@@ -41,7 +41,7 @@ const Profile = () => {
   return (
       <div className="relative flex flex-col items-center text-gray-900 p-8">
         <div className="hero-background"/>
-        <div className="w-full max-w-2xl bg-opacity-75 bg-black p-8 rounded-lg shadow-xl">
+        <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
 
           <div className="relative mb-8 flex flex-col items-center justify-center">
             <img
