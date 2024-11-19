@@ -4,7 +4,7 @@ import HeroSection from "./components/herosection.jsx";
 import FeaturesSection from "./components/features.jsx";
 import NewsLetter from "./components/newsletter.jsx";
 import Testimonis from "./components/testimonis";
-import TeamsSection from "./components/teams.jsx";
+import Team from "./pages/Team.jsx";
 import ProductsContent from './pages/Products.jsx';
 import CTASection from './components/CTA.jsx';
 import Contact from './pages/Contact.jsx';
@@ -36,7 +36,6 @@ function App() {
                                     <FeaturesSection />
                                     <NewsLetter />
                                     <Testimonis />
-                                    <TeamsSection />
                                     <Faqs />
                                 </>
                             }
@@ -76,6 +75,10 @@ function App() {
                         <Route
                             path="/Checkout"
                             element={<Checkout />}
+                        />
+                        <Route
+                            path="/team"
+                            element={<Team />}
                         />
                     </Routes>
                 <Footer />

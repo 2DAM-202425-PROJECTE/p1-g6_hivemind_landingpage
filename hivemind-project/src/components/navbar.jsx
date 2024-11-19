@@ -5,7 +5,7 @@ export default function NavigationBar() {
     const navigation = [
         { name: 'Home', href: '/', current: true },
         { name: 'Products', href: '/products', current: false },
-        { name: 'Blog', href: '#', current: false },
+        { name: 'Equip', href: '/team', current: false },
         { name: 'Contact', href: '/contact', current: false },
     ];
 
