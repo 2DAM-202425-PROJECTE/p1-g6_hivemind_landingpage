@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
     return (
-        <div className="relative flex flex-col items-start justify-start text-white hivemind-hero-section mt-10">
+        <div className="relative flex flex-col items-start justify-start text-white mt-10">
             <div className="hero-background"/>
             <div className="w-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
                 <div className="container mx-auto p-6">

@@ -22,7 +22,6 @@ import './index.css';
 function App() {
     return (
         <Router>
-            <div>
                 <NavigationBar />
                 <CookieBanner />
                     <Routes>
@@ -73,7 +72,6 @@ function App() {
                             element={<Purchase />}
                         />
                     </Routes>
-                </div>
                 <Footer />
         </Router>
     );
