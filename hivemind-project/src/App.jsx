@@ -18,6 +18,8 @@ import TermsConditions from "./pages/TermsConditions.jsx";
 import Register from "./pages/Register.jsx";
 import Purchase from "./pages/Purchase.jsx"; // Import the Purchase component
 import './index.css';
+import Checkout from './pages/Checkout.jsx'; // Import the Checkout component
+
 
 function App() {
     return (
@@ -70,6 +72,10 @@ function App() {
                         <Route
                             path="/purchase"
                             element={<Purchase />}
+                        />
+                        <Route
+                            path="/Checkout"
+                            element={<Checkout />}
                         />
                     </Routes>
                 <Footer />

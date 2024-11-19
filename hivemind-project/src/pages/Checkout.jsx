@@ -1,26 +1,29 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-export default function Purchase() {
+export default function Checkout() {
   const location = useLocation();
-  const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
   const product = queryParams.get('product');
   const price = queryParams.get('price');
   const description = queryParams.get('description');
   const features = queryParams.get('features')?.split(',');
 
-  const handleCheckout = () => {
-    navigate(`/checkout?product=${product}&price=${price}&description=${description}&features=${features.join(',')}`);
+  // Generate a random activation code in the format xxxx-xxxx-xxxx
+  const generateActivationCode = () => {
+    const segment = () => Math.random().toString(36).substring(2, 6).toUpperCase();
+    return `${segment()}-${segment()}-${segment()}`;
   };
+
+  const activationCode = generateActivationCode();
 
   return (
     <div className="relative flex flex-col items-start justify-start text-white mt-10">
       <div className="hero-background" />
       <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
-        <h1 className="text-4xl">Compra els nostres productes</h1>
+        <h1 className="text-4xl">Checkout</h1>
         <p className="mt-6 text-xl text-center">
-          Estàs a punt de comprar el producte: <strong>{product}</strong> per <strong>{price}€</strong>.
+          Has comprat el producte: <strong>{product}</strong> per <strong>{price}€</strong>.
         </p>
         <p className="mt-4 text-lg text-center">
           <strong>Descripció:</strong> {description}
@@ -31,8 +34,11 @@ export default function Purchase() {
             <li key={index}>✔️ {feature}</li>
           ))}
         </ul>
-        <div className="mt-10 flex flex-col items-center justify-center text-center">
-          <button className="px-4 py-2 bg-blue-600 rounded-lg text-white" onClick={handleCheckout}>Confirmar Compra</button>
+        <div className="mt-10 text-center">
+          <p className="text-lg">El teu codi d'activació és:</p>
+          <p className="text-2xl font-bold">{activationCode}</p>
+          <p className="mt-4 text-sm">Guarda aquest codi per activar el teu producte en una data futura.</p>
+          <p className="mt-4 text-sm">Registrat per a activar el producte i després ves al teu perfil i activa'l.</p>
         </div>
       </div>
     </div>
