@@ -53,7 +53,7 @@ const CookieBanner = () => {
 
     return (
         <div
-            className={`fixed bottom-4 right-4 bg-gradient-to-br bg-transparent backdrop-blur-3xl shadow-lg rounded-xl p-4 z-50 w-min h-min flex flex-col justify-between`}
+            className={`fixed bottom-4 right-4 backdrop-blur-3xl bg-black bg-opacity-60 shadow-lg rounded-xl p-4 z-50 w-min h-min flex flex-col justify-between`}
         >
             <div className="flex justify-between items-start flex-col">
                 <div className="text-lg text-white">

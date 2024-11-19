@@ -15,11 +15,6 @@
     z-index: -1;
 }
 
-.hivemind-hero-section{
-    position: relative;
-    z-index: -2;
-}
-
 .form-transparent {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
@@ -45,24 +40,4 @@
 
 .form-transparent button:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.bg-transparent {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-nav {
-  margin-top: 20px; /* Space between the top and the nav bar */
-  margin-bottom: 20px; /* Space between the nav bar and the body */
 }

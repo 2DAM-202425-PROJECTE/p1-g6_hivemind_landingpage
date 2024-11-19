@@ -21,7 +21,6 @@ import Register from "./pages/Register.jsx";
 function App() {
     return (
         <Router>
-            <div>
                 <NavigationBar />
                 <CookieBanner />
                     <Routes>
@@ -68,7 +67,6 @@ function App() {
                             element={<Register />}
                         />
                     </Routes>
-                </div>
                 <Footer />
         </Router>
     );
