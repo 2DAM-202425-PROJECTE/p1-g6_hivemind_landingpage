@@ -6,16 +6,15 @@ export default function ProductsContent() {
       <div className="hero-background" />
       <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
         <Link to="/" />
-        <h1 className="text-4xl">Products</h1>
+        <h1 className="text-4xl">Productes</h1>
         <p className="mt-6 text-xl text-center w-full">
-          Els productes desenvolupats per HiveMind, Inc. que et permetran millorar la teva experiència en el món de la tecnologia.
+            Benvingut a la nostra pàgina de productes! Aquí trobaràs una àmplia gamma de subscripcions i crèdits per personalitzar el teu perfil. Explora les nostres opcions i tria la que millor s'adapti a les teves necessitats.
         </p>
 
         {/* Explanation About Tiers */}
         <div className="mt-10 text-center">
           <p className="text-lg">
-            Les nostres subscripcions Premium ofereixen funcionalitats exclusives, crèdits mensuals i personalitzacions especials.
-            Escull el nivell que millor s’adapti a les teves necessitats.
+            Aquestes son els tiers que pots escullir per accedir a funcionalitats exclusives i personalitzar el teu perfil.
           </p>
         </div>
 

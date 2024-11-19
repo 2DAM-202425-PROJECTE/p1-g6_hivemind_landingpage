@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # O tu rama principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # O la versión que estés usando
+
+      - name: Install dependencies
+        run: |
+          cd hivemind-project
+          npm install  # O el comando adecuado si usas otro gestor de paquetes
+
+      - name: Build project
+        run: |
+          cd hivemind-project
+          npm run dev
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # La rama donde se hará el deploy
+          folder: hivemind-project/build  # O la carpeta donde se encuentra el build, si es diferente
