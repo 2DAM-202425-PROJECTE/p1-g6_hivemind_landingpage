@@ -1,5 +1,3 @@
-import {Button} from "@headlessui/react";
-
 export default function HeroSection() {
     return (
         <section className="relative flex flex-col items-center justify-center text-white">
@@ -24,7 +22,7 @@ export default function HeroSection() {
                                     Uneix-te ara
                                 </a>
                                 <a
-                                    href="/features"
+                                    href="#features"
                                     className="text-sm font-semibold leading-6 text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600"
                                     aria-label="Descobreix més sobre les característiques"
                                 >
