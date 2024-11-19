@@ -66,3 +66,18 @@ nav {
   margin-top: 20px; /* Space between the top and the nav bar */
   margin-bottom: 20px; /* Space between the nav bar and the body */
 }
+
+.button-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #1d4ed8;
+  color: white;
+  border-radius: 0.375rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button-link:hover {
+  background-color: #2563eb;
+}

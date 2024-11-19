@@ -15,8 +15,9 @@ import Faqs from './components/faqs.jsx';
 import CookieBanner from "./components/CookieBanner.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsConditions from "./pages/TermsConditions.jsx";
-import './index.css';
 import Register from "./pages/Register.jsx";
+import Purchase from "./pages/Purchase.jsx"; // Import the Purchase component
+import './index.css';
 
 function App() {
     return (
@@ -66,6 +67,10 @@ function App() {
                         <Route
                             path="/register"
                             element={<Register />}
+                        />
+                        <Route
+                            path="/purchase"
+                            element={<Purchase />}
                         />
                     </Routes>
                 </div>
