@@ -58,7 +58,7 @@ export default function NavigationBar() {
                     <div className="flex items-center ml-10">
                         <img
                             alt="La teva empresa"
-                            src="public/hivemind_logo_nobg.png"
+                            src="hivemind_logo_nobg.png"
                             className="h-8 w-auto"
                         />
                     </div>
@@ -82,13 +82,6 @@ export default function NavigationBar() {
                         </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <button
-                            type="button"
-                            className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                        >
-                            <span className="sr-only">Veure notificacions</span>
-                            <BellIcon className="h-6 w-6" aria-hidden="true" />
-                        </button>
                         <Menu as="div" className="relative">
                             <div>
                                 <MenuButton
@@ -106,7 +99,6 @@ export default function NavigationBar() {
                                 <MenuItem>
                                     <a href="/profile" className="block px-4 py-2 text-sm text-white">El teu perfil</a>
                                 </MenuItem>
-                                <MenuItem><a href="#" className="block px-4 py-2 text-sm text-white">Configuració</a></MenuItem>
                                 <MenuItem><a href="/login" className="block px-4 py-2 text-sm text-white">Inicia sessió</a></MenuItem>
                             </MenuItems>
                         </Menu>

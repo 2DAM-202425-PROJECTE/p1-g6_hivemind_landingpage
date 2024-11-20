@@ -20,76 +20,62 @@ const Login = () => {
     };
 
     return (
-        <div className="relative flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-            <div className="hero-background"/>
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
-                <img
-                    alt="Your Company"
-                    src="public/hivemind_logo_nobg.png"
-                    className="mx-auto h-10 w-auto"
-                />
-                <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
-                    El teu compte Hivemind:
+        <div className="relative">
+            <div className="hero-background" />
+            <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
+                <h2 className="text-3xl text-white text-center mb-10 font-bold">
+                    Inicia sessió
                 </h2>
-                <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form onSubmit={handleSubmit}>
-                        <div>
-                            <div className="flex items-center justify-between">
-                                <label htmlFor="username" className="block text-sm/6 font-medium text-gray-900">
-                                    Nom d'usuari
-                                </label>
-                            </div>
-                            <div className="mt-2">
-                                <input
-                                    id="username"
-                                    name="username"
-                                    type="text"
-                                    required
-                                    autoComplete="current-username"
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
-                                    onChange={(e) => setUsername(e.target.value)}
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <div className="flex items-center justify-between">
-                                <label htmlFor="password" className="block text-sm/6 font-medium text-gray-900">
-                                    Contrasenya
-                                </label>
-                                <div className="text-sm">
-                                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                                        Has oblidat la contrasenya?
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="mt-2">
-                                <input
-                                    id="password"
-                                    name="password"
-                                    type="password"
-                                    required
-                                    autoComplete="current-password"
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
-                                    onChange={(e) => setPassword(e.target.value)}
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <button
-                                type="submit"
-                                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            >
-                                Inicia sessio
-                            </button>
-                        </div>
-                    </form>
-                    <p className="mt-10 text-center text-sm/6 text-gray-500">
-                        Encara no ets membre?{' '}
-                        <a href="/register" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                            Registra't gratuitament
+                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg form-transparent">
+                    <div className="mb-4">
+                        <label className="block text-white text-sm font-bold mb-2" htmlFor="username">
+                            Nom d'usuari
+                        </label>
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            required
+                            autoComplete="current-username"
+                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-white text-sm font-bold mb-2" htmlFor="password">
+                            Contrasenya
+                        </label>
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            required
+                            autoComplete="current-password"
+                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div className="text-right mb-6">
+                        <a href="/recover-password" className="text-sm text-blue-300 hover:text-blue-500">
+                            Has oblidat la contrasenya?
                         </a>
-                    </p>
-                </div>
+                    </div>
+                    <div className="flex flex-col gap-4 items-center justify-between">
+                        <button
+                            type="submit"
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline w-full"
+                        >
+                            Inicia sessió
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => navigate('/register')}
+                            className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline w-full"
+                        >
+                            No tens un compte? Registra't
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     );

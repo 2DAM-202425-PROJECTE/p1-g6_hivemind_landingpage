@@ -16,9 +16,10 @@ import CookieBanner from "./components/CookieBanner.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsConditions from "./pages/TermsConditions.jsx";
 import Register from "./pages/Register.jsx";
-import Purchase from "./pages/Purchase.jsx"; // Import the Purchase component
+import Purchase from "./pages/Purchase.jsx";
 import './index.css';
-import Checkout from './pages/Checkout.jsx'; // Import the Checkout component
+import Checkout from './pages/Checkout.jsx';
+import RecoverPassword from "./pages/Recover-password.jsx";
 
 
 function App() {
@@ -67,6 +68,10 @@ function App() {
                         <Route
                             path="/register"
                             element={<Register />}
+                        />
+                        <Route
+                            path="/recover-password"
+                            element={<RecoverPassword />}
                         />
                         <Route
                             path="/purchase"

@@ -1,9 +1,9 @@
 export default function TeamPage() {
     const teamMembers = [
-        { name: 'Radostin Ivanov', role: 'CEO', imageUrl: '/public/noimage.png', description: 'Desenvolupador principal del projecte, amb estudis de SMX i DAM' },
-        { name: 'Gerard Moreno', role: 'CTO', imageUrl: '/public/noimage.png', description: 'Mantenidor del front end' },
-        { name: 'Manel Méndez', role: 'CFO', imageUrl: '/public/noimage.png', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet felis sit amet nunc.' },
-        { name: 'Harry White', role: 'COO', imageUrl: '/public/noimage.png', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet felis sit amet nunc.' },
+        { name: 'Radostin Ivanov', role: 'CEO', imageUrl: 'noimage.png', description: 'Desenvolupador principal del projecte, amb estudis de SMX i DAM' },
+        { name: 'Gerard Moreno', role: 'CTO', imageUrl: 'noimage.png', description: 'Mantenidor del front end' },
+        { name: 'Manel Méndez', role: 'CFO', imageUrl: 'noimage.png', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet felis sit amet nunc.' },
+        { name: 'Harry White', role: 'COO', imageUrl: 'noimage.png', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet felis sit amet nunc.' },
     ];
 
     return (
