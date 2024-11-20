@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 .hero-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/fondo.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fondo.webp');
     background-size: cover;
     background-position: center center;
     width: 100%;

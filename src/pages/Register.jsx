@@ -24,7 +24,7 @@ const Register = () => {
             <div className="sm:mx-auto sm:w-full sm:max-w-sm relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
                 <img
                     alt="Your Company"
-                    src="public/hivemind_logo_nobg.png"
+                    src="hivemind_logo_nobg.png"
                     className="mx-auto h-10 w-auto"
                 />
                 <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
