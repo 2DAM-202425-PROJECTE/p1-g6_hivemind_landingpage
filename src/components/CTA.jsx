@@ -14,12 +14,12 @@ function cta() {
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                     <a
-                        href="#"
+                        href="/register"
                         className="inline-block px-6 py-3 text-sm sm:text-base bg-[#a91079] text-black font-semibold rounded hover:bg-[#871065] transition">
                         Registra't ara
                     </a>
                     <a
-                        href="#"
+                        href="/products"
                         className="inline-block px-6 py-3 text-sm sm:text-base bg-gray-800 text-white font-semibold rounded hover:bg-gray-700 transition">
                         Descobreix més
                     </a>
