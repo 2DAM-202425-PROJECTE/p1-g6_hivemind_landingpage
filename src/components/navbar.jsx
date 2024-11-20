@@ -58,7 +58,7 @@ export default function NavigationBar() {
                     <div className="flex items-center ml-10">
                         <img
                             alt="La teva empresa"
-                            src="public/hivemind_logo_nobg.png"
+                            src="hivemind_logo_nobg.png"
                             className="h-8 w-auto"
                         />
                     </div>
