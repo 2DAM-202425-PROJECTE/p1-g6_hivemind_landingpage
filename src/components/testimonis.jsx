@@ -5,7 +5,7 @@ const testimonials = [
         name: "Maria Samntha",
         profession: "Social influencer",
         text: "I am having the best customer experience with this company. They are very professional and always deliver on time.",
-        image: "https://www.famousbirthdays.com/headshots/maria-samantha-de-leon-1.jpg", // Replace with the actual path to the image
+        image: "https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/328994755_701825068074013_874891610643226632_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=H6Y-iNaFr-kQ7kNvgEnjITK&_nc_zt=23&_nc_ht=scontent-bcn1-1.xx&_nc_gid=AhDqv7EouYPHFXnjSoUvI-h&oh=00_AYAnskbDthokonnGdMf2C6KMNgVfDrWXPnL3nML9oHgX7A&oe=67453AF7", // Replace with the actual path to the image
         rating: 5,
     },
     {
