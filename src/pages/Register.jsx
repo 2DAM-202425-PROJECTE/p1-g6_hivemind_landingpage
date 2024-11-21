@@ -20,7 +20,7 @@ const Register = () => {
             <div className="hero-background" />
             <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
                 <h2 className="text-3xl text-white text-center mb-10 font-bold">Crea el teu Compte</h2>
-                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg form-transparent">
+                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg bg-opacity-60 bg-black form-transparent">
                     <div className="mb-4">
                         <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
                             Nom i Cognoms
@@ -32,7 +32,7 @@ const Register = () => {
                             required
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="ex. John Doe"
                         />
                     </div>
@@ -47,7 +47,7 @@ const Register = () => {
                             required
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
-                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="ex. johndoe"
                         />
                     </div>
@@ -62,7 +62,7 @@ const Register = () => {
                             required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="*******"
                         />
                     </div>
