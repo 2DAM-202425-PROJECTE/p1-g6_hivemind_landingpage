@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CTA.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CTA.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/faqs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/faqs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/features.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/features.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/herosection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/herosection.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newsletter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/testimonis.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/testimonis.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +88,7 @@
       <workItem from="1731662679202" duration="195000" />
       <workItem from="1731688075607" duration="4781000" />
       <workItem from="1732177107645" duration="5825000" />
-      <workItem from="1732557890702" duration="1161000" />
+      <workItem from="1732557890702" duration="3435000" />
     </task>
     <task id="LOCAL-00001" summary="in progress">
       <option name="closed" value="true" />

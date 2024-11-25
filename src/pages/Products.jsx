@@ -4,7 +4,7 @@ export default function ProductsContent() {
   return (
     <div className="relative flex flex-col items-start justify-start text-white hivemind-hero-section mt-10">
       <div className="hero-background" />
-      <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
+      <div className="w-full h-full relative pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
         <Link to="/" />
         <h1 className="text-4xl">Productes</h1>
         <p className="mt-6 text-xl text-center w-full">
