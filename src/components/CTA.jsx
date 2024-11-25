@@ -1,6 +1,6 @@
 function cta() {
     return (
-        <section className="py-20 backdrop-blur-3xl rounded-3xl mt-10">
+        <section className="bg-pink-300">
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h2 className="text-sm sm:text-base font-semibold text-[#a91079] tracking-wide uppercase">
                     Descobreix Nexxus

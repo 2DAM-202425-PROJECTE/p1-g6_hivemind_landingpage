@@ -1,7 +1,10 @@
 import { Disclosure, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react';
 
 export default function NavigationBar() {
+    const [isScrolled, setIsScrolled] = useState(false);
+
     const navigation = [
         { name: 'Inici', href: '/', current: true },
         { name: 'Productes', href: '/products', current: false },
@@ -9,14 +12,35 @@ export default function NavigationBar() {
         { name: 'Contacte', href: '/contact', current: false },
     ];
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ');
     }
 
     return (
-        <Disclosure as="nav" className="bg-black/60 rounded-3xl mt-2 w-5/6 mx-auto backdrop-blur-2xl sticky top-2 z-20 mb-5">
+        <Disclosure
+            as="nav"
+            className={classNames(
+                'sticky top-0 left-0 w-5/6 mx-auto transition-all duration-300', // Agregar duración para la animación
+                isScrolled
+                    ? 'bg-black/60 h-14 rounded-3xl backdrop-blur-2xl top-4' // Cuando se hace scroll, altura reducida y bordes redondeados
+                    : 'bg-black/60 backdrop-blur-2xl h-20 w-full' // Cuando está arriba, altura completa sin bordes redondeados
+            )}
+        >
             <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
-                <div className="relative flex h-16 items-center justify-between">
+                <div className="relative flex items-center justify-between h-full">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         <Disclosure>
                             {({ open }) => (
@@ -28,10 +52,10 @@ export default function NavigationBar() {
                                         {open ? (
                                             <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                                         ) : (
-                                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                                            <Bars3Icon className="block h   -6 w-6" aria-hidden="true" />
                                         )}
                                     </Disclosure.Button>
-                                    <Disclosure.Panel className="absolute left-0 z-10 mt-72 w-48 rounded-3xl bg-gray-800 shadow-lg">
+                                    <Disclosure.Panel className="absolute left-0 z-10 mt-72 w-48 rounded-3xl bg-gray-8  00 shadow-lg">
                                         <div className="space-y-1 px-2 pb-3 pt-2">
                                             {navigation.map((item) => (
                                                 <Disclosure.Button

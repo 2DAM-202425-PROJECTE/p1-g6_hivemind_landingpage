@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CTA.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CTA.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/faqs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/faqs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/features.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/features.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/herosection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/herosection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/newsletter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/testimonis.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/testimonis.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.App.jsx.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "18.19.1",
-    "javascript.nodejs.core.library.typings.version": "18.19.64",
-    "last_opened_file_path": "/home/alumnat/MP13/fork/p1-g6_hivemind_landingpage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/home/alumnat/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.App.jsx.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.19.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.19.64&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alumnat/MP13/fork/p1-g6_hivemind_landingpage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/alumnat/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -88,7 +94,8 @@
       <workItem from="1731087616252" duration="1460000" />
       <workItem from="1731662679202" duration="195000" />
       <workItem from="1731688075607" duration="4781000" />
-      <workItem from="1732177107645" duration="3189000" />
+      <workItem from="1732177107645" duration="5825000" />
+      <workItem from="1732557890702" duration="1161000" />
     </task>
     <task id="LOCAL-00001" summary="in progress">
       <option name="closed" value="true" />

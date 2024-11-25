@@ -26,7 +26,7 @@ const testimonials = [
 
 function Testimonis() {
     return (
-        <div id="testimonials" className="max-w-5xl mx-auto p-8 text-center text-white">
+        <div id="testimonials" className="bg-blue-300">
             <h1 className="text-3xl font-semibold mb-8 text-white">Testimonials</h1>
             <div className="flex flex-col md:flex-row md:space-x-8 space-y-6 md:space-y-0">
                 {testimonials.map((testimonial, index) => (
