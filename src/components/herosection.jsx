@@ -1,9 +1,9 @@
 export default function HeroSection() {
     return (
-        <section className="relative flex flex-col items-center justify-center text-white">
-            <div className="hero-background absolute inset-0 -z-10" />
-            <div className="w-full h-full relative z-10">
-                <div className="relative isolate px-6 pt-14 lg:px-8 w-full h-full">
+        <section className="relative flex flex-col items-center justify-center text-white pt-24">
+            <div className="hero-background" />
+            <div className="w-full min-h-screen relative z-10">
+                <div className="relative isolate px-6 pt-14 lg:px-8 w-full">
                     <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                         <div className="text-center">
                             <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">

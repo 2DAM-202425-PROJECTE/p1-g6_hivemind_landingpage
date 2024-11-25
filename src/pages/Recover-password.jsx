@@ -21,7 +21,7 @@ const RecoverPassword = () => {
             <div className="hero-background" />
             <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
                 <h2 className="text-3xl text-white text-center mb-10 font-bold">Recupera la teva Contrasenya</h2>
-                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg form-transparent">
+                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg bg-opacity-60 bg-black form-transparent">
                     <div className="mb-4">
                         <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
                             Correu Electrònic
@@ -33,7 +33,7 @@ const RecoverPassword = () => {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="ex. correu@exemple.com"
                         />
                     </div>

@@ -27,7 +27,7 @@ function Newsletter() {
     };
 
     return (
-        <section className="py-20 backdrop-blur-3xl rounded-3xl mt-10">
+        <section className="bg-amber-300">
             <div className="from-teal-700 via-teal-600 to-teal-700 relative font-[sans-serif]">
                 <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                     <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-extrabold">

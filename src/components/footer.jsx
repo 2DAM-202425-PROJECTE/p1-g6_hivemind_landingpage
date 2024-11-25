@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';  // Si estàs utilitzant React Router p
 
 const Footer = () => {
     return (
-        <footer className="bg-black/60 rounded-3xl mt-2 w-full mx-auto backdrop-blur-2xl text-white text-center py-4">
+        <footer className="bg-black w-full mx-auto backdrop-blur-2xl text-white text-center py-4">
             <p>&copy; 2024 Hivemind Nexus. Tots els drets reservats.</p>
             <div className="mt-4">
                 <Link to="/contact" className="text-white hover:text-gray-300 mx-3">

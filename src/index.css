@@ -3,41 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* hivemind-project/src/index.css */
 .hero-background {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/fondo.webp');
     background-size: cover;
-    background-position: center center;
+    background-position: center;
+    background-attachment: fixed; /* Efecto Parallax */
     width: 100%;
-    height: 100vh;
-    position: fixed;
+    height: 100vh; /* Asegura que la imagen de fondo ocupe toda la pantalla */
+    position: fixed; /* Cambiar a fixed para que no se mueva con el scroll */
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -1; /* Fondo por debajo de todo el contenido */
 }
 
-.form-transparent {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    backdrop-filter: blur(10px);
-}
 
-.form-transparent input,
-.form-transparent textarea {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-}
 
-.form-transparent input::placeholder,
-.form-transparent textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
 
-.form-transparent input:focus,
-.form-transparent textarea:focus {
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.form-transparent button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}

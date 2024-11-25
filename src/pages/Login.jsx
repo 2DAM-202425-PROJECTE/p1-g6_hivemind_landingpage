@@ -11,7 +11,6 @@ const Login = () => {
         e.preventDefault();
         axios.post('http://localhost:3001/login', { username, password })
             .then(result => {
-                console.log(result);
                 if (result.data === "Success") {
                     navigate('/profile');
                 }
@@ -23,22 +22,22 @@ const Login = () => {
         <div className="relative">
             <div className="hero-background" />
             <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
-                <h2 className="text-3xl text-white text-center mb-10 font-bold">
-                    Inicia sessió
-                </h2>
-                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg form-transparent">
+                <h2 className="text-3xl text-white text-center mb-10 font-bold">Inicia sessió</h2>
+                <form onSubmit={handleSubmit}
+                      className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg bg-opacity-60 bg-black form-transparent">
                     <div className="mb-4">
                         <label className="block text-white text-sm font-bold mb-2" htmlFor="username">
                             Nom d'usuari
                         </label>
                         <input
+                            type="text"
                             id="username"
                             name="username"
-                            type="text"
                             required
-                            autoComplete="current-username"
-                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            value={username}
                             onChange={(e) => setUsername(e.target.value)}
+                            className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="ex. johndoe"
                         />
                     </div>
                     <div className="mb-4">
@@ -46,17 +45,21 @@ const Login = () => {
                             Contrasenya
                         </label>
                         <input
+                            type="password"
                             id="password"
                             name="password"
-                            type="password"
                             required
-                            autoComplete="current-password"
-                            className="shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="*******"
                         />
                     </div>
                     <div className="text-right mb-6">
-                        <a href="/recover-password" className="text-sm text-blue-300 hover:text-blue-500">
+                        <a
+                            href="/recover-password"
+                            className="text-sm text-blue-300 hover:text-blue-500"
+                        >
                             Has oblidat la contrasenya?
                         </a>
                     </div>
