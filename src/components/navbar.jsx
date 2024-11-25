@@ -33,15 +33,16 @@ export default function NavigationBar() {
         <Disclosure
             as="nav"
             className={classNames(
-                'sticky top-0 left-0 w-5/6 mx-auto transition-all duration-300', // Agregar duración para la animación
+                'sticky top-0 left-0 w-5/6 mx-auto transition-all duration-300 z-10', // Agregar z-index en el nav para evitar solapamientos
                 isScrolled
                     ? 'bg-black/60 h-14 rounded-3xl backdrop-blur-2xl top-4' // Cuando se hace scroll, altura reducida y bordes redondeados
-                    : 'bg-black/60 backdrop-blur-2xl h-20 w-full' // Cuando está arriba, altura completa sin bordes redondeados
+                    : 'bg-black/60 backdrop-blur-2xl w-full' // Cuando está arriba, altura completa sin bordes redondeados
             )}
         >
             <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
-                <div className="relative flex items-center justify-between h-full">
-                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <div className="relative flex items-center justify-between">
+                    {/* Menu hamburguesa en pantallas pequeñas */}
+                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden z-20">
                         <Disclosure>
                             {({ open }) => (
                                 <>
@@ -52,10 +53,10 @@ export default function NavigationBar() {
                                         {open ? (
                                             <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                                         ) : (
-                                            <Bars3Icon className="block h   -6 w-6" aria-hidden="true" />
+                                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                                         )}
                                     </Disclosure.Button>
-                                    <Disclosure.Panel className="absolute left-0 z-10 mt-72 w-48 rounded-3xl bg-gray-8  00 shadow-lg">
+                                    <Disclosure.Panel className="absolute left-0 z-50 mt-12 w-48 rounded-3xl bg-gray-800 shadow-lg">
                                         <div className="space-y-1 px-2 pb-3 pt-2">
                                             {navigation.map((item) => (
                                                 <Disclosure.Button
@@ -79,6 +80,8 @@ export default function NavigationBar() {
                             )}
                         </Disclosure>
                     </div>
+
+                    {/* Logo en el lado izquierdo */}
                     <div className="flex items-center ml-10">
                         <img
                             alt="La teva empresa"
@@ -86,7 +89,9 @@ export default function NavigationBar() {
                             className="h-8 w-auto"
                         />
                     </div>
-                    <div className="flex-1 flex justify-center">
+
+                    {/* Enlaces de navegación centrados */}
+                    <div className="flex-1 flex justify-center items-center h-14"> {/* Centrado en pantallas grandes */}
                         <div className="hidden sm:block">
                             <div className="flex space-x-4">
                                 {navigation.map((item) => (
@@ -96,7 +101,7 @@ export default function NavigationBar() {
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
                                             item.current ? 'text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                            'rounded-md px-3 py-2 text-sm font-medium',
+                                            'rounded-md px-3 py-2 text-lg font-medium' // Aumentamos el tamaño de la fuente
                                         )}
                                     >
                                         {item.name}
@@ -105,6 +110,8 @@ export default function NavigationBar() {
                             </div>
                         </div>
                     </div>
+
+                    {/* Menu de usuario en el lado derecho */}
                     <div className="flex items-center space-x-4">
                         <Menu as="div" className="relative">
                             <div>
@@ -129,6 +136,7 @@ export default function NavigationBar() {
                     </div>
                 </div>
             </div>
+            {/* Para móviles */}
             <Disclosure.Panel className="sm:hidden">
                 <div className="space-y-1 px-2 pb-3 pt-2">
                     {navigation.map((item) => (
@@ -139,7 +147,7 @@ export default function NavigationBar() {
                             aria-current={item.current ? 'page' : undefined}
                             className={classNames(
                                 item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                'block rounded-md px-3 py-2 text-base font-medium',
+                                'block rounded-md px-3 py-2 text-base font-medium'
                             )}
                         >
                             {item.name}
