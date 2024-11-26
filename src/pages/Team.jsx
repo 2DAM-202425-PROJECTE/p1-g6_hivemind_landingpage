@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TeamPage() {
     const teamMembers = [
@@ -26,7 +26,7 @@ export default function TeamPage() {
                         {teamMembers.map((member) => (
                             <div key={member.name}
                                  className="bg-white/10 backdrop-blur-3xl rounded-3xl shadow-lg p-6 text-center text-white transition-transform transform hover:scale-105 hover:shadow-2xl animate-slide-up">
-                                <Image
+                                <img
                                     src={member.imageUrl}
                                     alt={member.name}
                                     width={96}
@@ -56,11 +56,11 @@ export default function TeamPage() {
                 <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-blue-900/80 backdrop-blur-lg rounded-3xl my-8">
                     <h2 className="text-4xl font-bold text-center mb-8 text-white">La nostra missió</h2>
                     <p className="text-xl text-center text-gray-300 mb-8">
-                        A HiveMind, la nostra missió és crear una plataforma innovadora que connecti persones i idees, 
+                        A HiveMind, la nostra missió és crear una plataforma innovadora que connecti persones i idees,
                         fomentant la col·laboració i el creixement personal i professional.
                     </p>
                     <div className="text-center">
-                        <Link href="/about" className="inline-block bg-white text-blue-900 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300">
+                        <Link to="/about" className="inline-block bg-white text-blue-900 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300">
                             Descobreix més sobre nosaltres
                         </Link>
                     </div>
@@ -69,18 +69,18 @@ export default function TeamPage() {
                 <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-800/80 backdrop-blur-lg rounded-3xl my-8">
                     <h2 className="text-4xl font-bold text-center mb-8 text-white">Uneix-te al nostre equip</h2>
                     <p className="text-xl text-center text-gray-300 mb-8">
-                        Estem sempre buscant talent apassionat i creatiu per unir-se a la nostra missió. 
+                        Estem sempre buscant talent apassionat i creatiu per unir-se a la nostra missió.
                         Si creus que pots aportar valor al nostre equip, ens encantaria saber de tu!
                     </p>
                     <div className="text-center">
-                        <Link href="/careers" className="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                        <Link to="/careers" className="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300">
                             Veure ofertes de treball
                         </Link>
                     </div>
                 </section>
             </main>
 
-            <style jsx>{`
+            <style>{`
                 @keyframes fade-in {
                     from { opacity: 0; }
                     to { opacity: 1; }
