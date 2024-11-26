@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/herosection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/herosection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23726.96" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102" />
+        <option value="bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
@@ -89,6 +89,7 @@
       <workItem from="1731688075607" duration="4781000" />
       <workItem from="1732177107645" duration="5825000" />
       <workItem from="1732557890702" duration="3435000" />
+      <workItem from="1732645555355" duration="1302000" />
     </task>
     <task id="LOCAL-00001" summary="in progress">
       <option name="closed" value="true" />
