@@ -1,6 +1,6 @@
 function cta() {
     return (
-        <section className="bg-pink-500 p-4 rounded-3xl">
+        <section className="bg-cyan-600 p-4 rounded-3xl">
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h2 className="text-sm sm:text-base font-semibold text-[#a91079] tracking-wide uppercase">
                     Descobreix Nexxus
@@ -15,12 +15,12 @@ function cta() {
                 <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                     <a
                         href="/register"
-                        className="inline-block px-6 py-3 text-sm sm:text-base bg-[#a91079] text-black font-semibold rounded hover:bg-[#871065] transition">
+                        className="inline-block px-6 py-3 text-sm sm:text-base bg-[#a91079] text-black font-semibold rounded-3xl hover:bg-[#871065] transition">
                         Registra't ara
                     </a>
                     <a
                         href="/products"
-                        className="inline-block px-6 py-3 text-sm sm:text-base bg-gray-800 text-white font-semibold rounded hover:bg-gray-700 transition">
+                        className="inline-block px-6 py-3 text-sm sm:text-base bg-gray-800 text-white font-semibold rounded-3xl hover:bg-gray-700 transition">
                         Descobreix més
                     </a>
                 </div>
