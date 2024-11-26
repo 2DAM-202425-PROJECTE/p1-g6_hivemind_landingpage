@@ -5,7 +5,7 @@ const testimonials = [
         name: "Maria Samntha",
         profession: "Social influencer",
         text: "I am having the best customer experience with this company. They are very professional and always deliver on time.",
-        image: "https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/328994755_701825068074013_874891610643226632_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=H6Y-iNaFr-kQ7kNvgEnjITK&_nc_zt=23&_nc_ht=scontent-bcn1-1.xx&_nc_gid=AhDqv7EouYPHFXnjSoUvI-h&oh=00_AYAnskbDthokonnGdMf2C6KMNgVfDrWXPnL3nML9oHgX7A&oe=67453AF7", // Replace with the actual path to the image
+        image: "https://www.famousbirthdays.com/headshots/maria-samantha-de-leon-3.jpg",
         rating: 5,
     },
     {
@@ -26,14 +26,14 @@ const testimonials = [
 
 function Testimonis() {
     return (
-        <div id="testimonials" className="bg-blue-300">
+        <div id="testimonials" className="bg-blue-800 p-4 rounded-3xl mt-5">
             <h1 className="text-3xl font-semibold mb-8 text-white">Testimonials</h1>
             <div className="flex flex-col md:flex-row md:space-x-8 space-y-6 md:space-y-0">
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="backdrop-blur-3xl p-6 rounded-3xl shadow-lg flex flex-col items-center">
                         <img src={testimonial.image} alt={testimonial.name} className="rounded-full w-24 h-24 mb-4" />
-                        <h2 className="font-bold text-xl">{testimonial.name}</h2>
-                        <p className="text-blue-500">{testimonial.profession}</p>
+                        <h2 className="font-bold text-xl text-white">{testimonial.name}</h2>
+                        <p className="text-blue-200">{testimonial.profession}</p>
                         <p className="mt-2 text-lg italic text-white">&quot;{testimonial.text}&quot;</p>
                         <div className="mt-2 text-yellow-500">
                             {'★'.repeat(Math.floor(testimonial.rating))}{'☆'.repeat(5 - Math.floor(testimonial.rating))}

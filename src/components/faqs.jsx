@@ -28,7 +28,7 @@ const Faqs = () => {
     };
 
     return (
-        <section className="bg-orange-300">
+        <section className="bg-orange-300 p-4 rounded-3xl mt-5">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-extrabold text-white mb-6">Preguntes freqüents</h2>
                 <div className="space-y-4">

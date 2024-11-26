@@ -2,7 +2,7 @@ import { FaGamepad, FaUsers, FaRocket, FaClipboardList } from 'react-icons/fa';
 
 export default function FeaturesSection() {
     return (
-        <section id="features" className="bg-green-300">
+        <section id="features" className="bg-green-600 p-4 rounded-3xl mt-5">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
                     <div className="relative w-full text-center lg:text-left lg:w-2/4">
@@ -15,7 +15,7 @@ export default function FeaturesSection() {
                             Connecta, col·labora i juga amb una comunitat de jugadors dins d'un ecosistema digital pensat per a tu.
                         </p>
                         <a href="/products"
-                           className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-400 lg:justify-start hover:text-indigo-700">
+                           className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-700 lg:justify-start hover:text-indigo-700">
                             Descobreix més <FaRocket size={20} />
                         </a>
                     </div>
