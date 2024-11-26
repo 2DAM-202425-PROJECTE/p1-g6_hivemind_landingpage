@@ -1,25 +1,37 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 export default function TeamPage() {
     const teamMembers = [
-        { name: 'Radostin Ivanov', role: 'CEO', imageUrl: 'noimage.png', description: 'Desenvolupador principal del projecte, amb estudis de SMX i DAM' },
-        { name: 'Gerard Moreno', role: 'CTO', imageUrl: 'noimage.png', description: 'Mantenidor del front end' },
-        { name: 'Manel Méndez', role: 'CFO', imageUrl: 'noimage.png', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet felis sit amet nunc.' },
-        { name: 'Harry White', role: 'COO', imageUrl: 'noimage.png', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet felis sit amet nunc.' },
+        { name: 'Radostin Ivanov', role: 'CEO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Desenvolupador principal del projecte, amb estudis de SMX i DAM' },
+        { name: 'Gerard Moreno', role: 'CTO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Mantenidor del front end amb experiència en React i Next.js' },
+        { name: 'Manel Méndez', role: 'CFO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Expert en finances i estratègia empresarial amb més de 10 anys d\'experiència' },
+        { name: 'Harry White', role: 'COO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Especialista en operacions i optimització de processos empresarials' },
+    ];
+
+    const companyValues = [
+        { title: 'Innovació', description: 'Busquem constantment noves maneres de millorar i créixer' },
+        { title: 'Integritat', description: 'Actuem amb honestedat i transparència en tot el que fem' },
+        { title: 'Col·laboració', description: 'Treballem junts per aconseguir objectius comuns' },
+        { title: 'Excel·lència', description: 'Ens esforcem per oferir la millor qualitat en tots els nostres productes i serveis' },
     ];
 
     return (
         <div className="flex flex-col min-h-screen">
             <div className="hero-background"/>
-            <div className="flex-grow flex flex-col justify-center items-center relative z-10">
-                <div className="sm:mx-auto sm:w-full bg-blue-950 rounded-3xl p-10">
-                    <h2 className="text-5xl font-extrabold text-center mb-8 text-white animate-fade-in">El nostre equip</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <main className="flex-grow flex flex-col justify-center items-center relative z-10">
+                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-blue-950/80 backdrop-blur-lg rounded-3xl my-8">
+                    <h1 className="text-5xl font-extrabold text-center mb-8 text-white animate-fade-in">El nostre equip</h1>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {teamMembers.map((member) => (
                             <div key={member.name}
                                  className="bg-white/10 backdrop-blur-3xl rounded-3xl shadow-lg p-6 text-center text-white transition-transform transform hover:scale-105 hover:shadow-2xl animate-slide-up">
-                                <img
+                                <Image
                                     src={member.imageUrl}
                                     alt={member.name}
-                                    className="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-white"
+                                    width={96}
+                                    height={96}
+                                    className="rounded-full mx-auto mb-4 border-2 border-white"
                                 />
                                 <h3 className="text-2xl font-semibold">{member.name}</h3>
                                 <p className="text-lg text-gray-300">{member.role}</p>
@@ -27,16 +39,51 @@ export default function TeamPage() {
                             </div>
                         ))}
                     </div>
-                </div>
-            </div>
+                </section>
+
+                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-900/80 backdrop-blur-lg rounded-3xl my-8">
+                    <h2 className="text-4xl font-bold text-center mb-8 text-white">Els nostres valors</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {companyValues.map((value, index) => (
+                            <div key={index} className="bg-gray-800/50 rounded-xl p-6 shadow-lg">
+                                <h3 className="text-2xl font-semibold text-white mb-2">{value.title}</h3>
+                                <p className="text-gray-300">{value.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-blue-900/80 backdrop-blur-lg rounded-3xl my-8">
+                    <h2 className="text-4xl font-bold text-center mb-8 text-white">La nostra missió</h2>
+                    <p className="text-xl text-center text-gray-300 mb-8">
+                        A HiveMind, la nostra missió és crear una plataforma innovadora que connecti persones i idees, 
+                        fomentant la col·laboració i el creixement personal i professional.
+                    </p>
+                    <div className="text-center">
+                        <Link href="/about" className="inline-block bg-white text-blue-900 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300">
+                            Descobreix més sobre nosaltres
+                        </Link>
+                    </div>
+                </section>
+
+                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-800/80 backdrop-blur-lg rounded-3xl my-8">
+                    <h2 className="text-4xl font-bold text-center mb-8 text-white">Uneix-te al nostre equip</h2>
+                    <p className="text-xl text-center text-gray-300 mb-8">
+                        Estem sempre buscant talent apassionat i creatiu per unir-se a la nostra missió. 
+                        Si creus que pots aportar valor al nostre equip, ens encantaria saber de tu!
+                    </p>
+                    <div className="text-center">
+                        <Link href="/careers" className="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                            Veure ofertes de treball
+                        </Link>
+                    </div>
+                </section>
+            </main>
+
             <style jsx>{`
                 @keyframes fade-in {
-                    from {
-                        opacity: 0;
-                    }
-                    to {
-                        opacity: 1;
-                    }
+                    from { opacity: 0; }
+                    to { opacity: 1; }
                 }
 
                 @keyframes slide-up {
@@ -59,12 +106,12 @@ export default function TeamPage() {
                 }
 
                 .hero-background {
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/fondo.webp');
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/fondo.webp');
                     background-size: cover;
                     background-position: center;
                     background-attachment: fixed;
                     width: 100%;
-                    height: 100vh;
+                    height: 100%;
                     position: fixed;
                     top: 0;
                     left: 0;
@@ -74,3 +121,4 @@ export default function TeamPage() {
         </div>
     );
 }
+
