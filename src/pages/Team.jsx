@@ -60,8 +60,8 @@ export default function TeamPage() {
                         fomentant la col·laboració i el creixement personal i professional.
                     </p>
                     <div className="text-center">
-                        <Link to="/about" className="inline-block bg-white text-blue-900 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300">
-                            Descobreix més sobre nosaltres
+                        <Link to="/" className="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                            Informa't més
                         </Link>
                     </div>
                 </section>
@@ -73,8 +73,8 @@ export default function TeamPage() {
                         Si creus que pots aportar valor al nostre equip, ens encantaria saber de tu!
                     </p>
                     <div className="text-center">
-                        <Link to="/careers" className="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300">
-                            Veure ofertes de treball
+                        <Link to="/Contact" className="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                            Ficat en contacte!
                         </Link>
                     </div>
                 </section>

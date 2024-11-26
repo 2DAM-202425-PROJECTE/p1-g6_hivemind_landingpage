@@ -10,63 +10,78 @@ const Contact = () => {
 
     const [errors, setErrors] = useState({});
     const [successMessage, setSuccessMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
+        setFormData((prevData) => ({
+            ...prevData,
             [name]: value,
-        });
+        }));
+        // Clear error when user starts typing
+        if (errors[name]) {
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                [name]: '',
+            }));
+        }
     };
 
     const validate = () => {
         const newErrors = {};
-        if (!formData.name) newErrors.name = 'Name is required';
-        if (!formData.email) {
-            newErrors.email = 'Email is required';
+        if (!formData.name.trim()) newErrors.name = 'El nom és obligatori';
+        if (!formData.email.trim()) {
+            newErrors.email = 'El correu electrònic és obligatori';
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = 'Email is invalid';
+            newErrors.email = 'El correu electrònic no és vàlid';
         }
-        if (!formData.message) newErrors.message = 'Message is required';
+        if (!formData.message.trim()) newErrors.message = 'El missatge és obligatori';
         return newErrors;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
         } else {
-            emailjs
-                .send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID')
-                .then(
-                    (response) => {
-                        console.log('SUCCESS!', response.status, response.text);
-                        setSuccessMessage('Email sent successfully!');
-                        setErrors({});
-                    },
-                    (err) => {
-                        console.log('FAILED...', err);
-                    }
-                );
+            setIsLoading(true);
+            try {
+                await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID');
+                setSuccessMessage('Correu enviat correctament!');
+                setErrors({});
+                setFormData({ name: '', email: '', message: '' });
+            } catch (err) {
+                console.error('FAILED...', err);
+                setErrors({ submit: 'Hi ha hagut un error en enviar el missatge. Si us plau, torna-ho a provar més tard.' });
+            } finally {
+                setIsLoading(false);
+            }
         }
+    };
+
+    const handleReset = () => {
+        setFormData({ name: '', email: '', message: '' });
+        setErrors({});
+        setSuccessMessage('');
     };
 
     return (
         <div className="flex flex-col min-h-screen">
-            <div className="hero-background"/>
-            <div className="flex-grow flex flex-col justify-center items-center relative z-10">
-                <div className="sm:mx-auto sm:w-full bg-blue-950 rounded-3xl p-10">
-                    <h2 className="text-3xl text-white text-center mb-10 font-bold">Contacte</h2>
-                    <p className="mt-6 text-xl text-center w-full text-white mb-6">
+            <div className="hero-background" />
+            <div className="flex-grow flex flex-col justify-center items-center relative z-10 px-4 py-12">
+                <div className="w-full max-w-2xl bg-blue-950 rounded-3xl p-8 md:p-12 shadow-2xl">
+                    <h2 className="text-4xl text-white text-center mb-8 font-bold">Contacte</h2>
+                    <p className="text-xl text-center w-full text-white mb-8">
                         Contacta amb nosaltres per a qualsevol dubte o suggeriment. Estarem encantats
                         d'ajudar-te!
                     </p>
                     <form
                         onSubmit={handleSubmit}
-                        className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg bg-black/60 text-white"
+                        className="space-y-6"
+                        noValidate
                     >
-                        <div className="mb-4">
+                        <div>
                             <label
                                 className="block text-white text-sm font-bold mb-2"
                                 htmlFor="name"
@@ -79,15 +94,17 @@ const Contact = () => {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="shadow appearance-none border border-transparent bg-black/60 rounded-3xl w-full py-2 px-3 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+                                className={`shadow appearance-none border ${errors.name ? 'border-red-500' : 'border-transparent'} bg-black/60 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
                                 placeholder="ex. John Doe"
                                 required
+                                aria-invalid={errors.name ? 'true' : 'false'}
+                                aria-describedby={errors.name ? 'name-error' : undefined}
                             />
                             {errors.name && (
-                                <p className="text-red-500 text-xs italic">{errors.name}</p>
+                                <p className="text-red-500 text-xs italic mt-1" id="name-error">{errors.name}</p>
                             )}
                         </div>
-                        <div className="mb-4">
+                        <div>
                             <label
                                 className="block text-white text-sm font-bold mb-2"
                                 htmlFor="email"
@@ -100,15 +117,17 @@ const Contact = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="shadow appearance-none border border-transparent bg-black/60 rounded-3xl w-full py-2 px-3 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+                                className={`shadow appearance-none border ${errors.email ? 'border-red-500' : 'border-transparent'} bg-black/60 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
                                 placeholder="ex. jdoe@hivemind.com"
                                 required
+                                aria-invalid={errors.email ? 'true' : 'false'}
+                                aria-describedby={errors.email ? 'email-error' : undefined}
                             />
                             {errors.email && (
-                                <p className="text-red-500 text-xs italic">{errors.email}</p>
+                                <p className="text-red-500 text-xs italic mt-1" id="email-error">{errors.email}</p>
                             )}
                         </div>
-                        <div className="mb-4">
+                        <div>
                             <label
                                 className="block text-white text-sm font-bold mb-2"
                                 htmlFor="message"
@@ -120,31 +139,59 @@ const Contact = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="shadow appearance-none border border-transparent bg-black/60 rounded-3xl w-full py-2 px-3 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+                                className={`shadow appearance-none border ${errors.message ? 'border-red-500' : 'border-transparent'} bg-black/60 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
                                 rows="5"
-                                placeholder="Missatge"
+                                placeholder="El teu missatge aquí..."
                                 required
+                                aria-invalid={errors.message ? 'true' : 'false'}
+                                aria-describedby={errors.message ? 'message-error' : undefined}
                             />
                             {errors.message && (
-                                <p className="text-red-500 text-xs italic">{errors.message}</p>
+                                <p className="text-red-500 text-xs italic mt-1" id="message-error">{errors.message}</p>
                             )}
                         </div>
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between space-x-4">
                             <button
                                 type="submit"
-                                className="bg-black/60 hover:bg-black/80 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:ring-2 focus:ring-white/50 w-full"
+                                className="bg-white hover:bg-gray-200 text-blue-950 font-bold py-3 px-6 rounded-3xl focus:outline-none focus:ring-2 focus:ring-white/50 transition duration-300 flex-grow"
+                                disabled={isLoading}
                             >
-                                Enviar
+                                {isLoading ? 'Enviant...' : 'Enviar'}
+                            </button>
+                            <button
+                                type="button"
+                                onClick={handleReset}
+                                className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-3xl focus:outline-none focus:ring-2 focus:ring-red-300 transition duration-300"
+                            >
+                                Reiniciar
                             </button>
                         </div>
+                        {errors.submit && (
+                            <p className="text-red-500 text-sm italic mt-4">{errors.submit}</p>
+                        )}
                         {successMessage && (
-                            <p className="text-green-500 text-xs italic mt-4">{successMessage}</p>
+                            <p className="text-green-400 text-sm font-semibold mt-4">{successMessage}</p>
                         )}
                     </form>
                 </div>
             </div>
+            <style jsx>{`
+                .hero-background {
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/fondo.webp');
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+            `}</style>
         </div>
     );
 };
 
 export default Contact;
+
