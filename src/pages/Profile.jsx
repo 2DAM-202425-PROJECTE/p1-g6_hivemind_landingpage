@@ -56,9 +56,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center text-white p-8">
+    <div className="relative min-h-screen flex flex-col items-center justify-center text-white">
       <div className="hero-background"/>
-      <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5 bg-gray-900">
+      <div className="w-full max-w-lg bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
         <div className="relative mb-8 flex flex-col items-center justify-center">
           <img
             src={profile.profilePic}
