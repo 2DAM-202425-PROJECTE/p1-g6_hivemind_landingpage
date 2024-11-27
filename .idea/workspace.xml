@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Checkout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PrivacyPolicy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PrivacyPolicy.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Purchase.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Purchase.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CTA.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CTA.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/faqs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/faqs.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +92,7 @@
       <workItem from="1732645555355" duration="3694000" />
       <workItem from="1732719981008" duration="632000" />
       <workItem from="1732720923199" duration="25000" />
-      <workItem from="1732731788888" duration="4029000" />
+      <workItem from="1732731788888" duration="4855000" />
     </task>
     <task id="LOCAL-00001" summary="in progress">
       <option name="closed" value="true" />

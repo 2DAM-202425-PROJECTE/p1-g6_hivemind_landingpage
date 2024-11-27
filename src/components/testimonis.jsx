@@ -28,7 +28,7 @@ function Testimonis() {
     return (
         <div id="testimonials" className="bg-blue-800 p-4 rounded-3xl mt-5">
             <h1 className="text-3xl font-semibold mb-8 text-white">Testimonials</h1>
-            <div className="flex flex-col md:flex-row md:space-x-8 space-y-6 md:space-y-0">
+            <div className="flex flex-col md:flex-row md:space-x-8 space-y-6 md:space-y-0 max-w-4xl mx-auto">
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="backdrop-blur-3xl p-6 rounded-3xl shadow-lg flex flex-col items-center">
                         <img src={testimonial.image} alt={testimonial.name} className="rounded-full w-24 h-24 mb-4" />
