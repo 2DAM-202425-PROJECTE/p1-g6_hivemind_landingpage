@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function TeamPage() {
     const teamMembers = [
-        { name: 'Radostin Ivanov', role: 'CEO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Desenvolupador principal del projecte, amb estudis de SMX i DAM' },
+        { name: 'Radostin Ivanov', role: 'CEO', imageUrl: '/public/teams/radostin.jpg', description: 'Desenvolupador principal del projecte, amb estudis de SMX i DAM' },
         { name: 'Gerard Moreno', role: 'CTO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Mantenidor del front end amb experiència en React i Next.js' },
         { name: 'Manel Méndez', role: 'CFO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Expert en finances i estratègia empresarial amb més de 10 anys d\'experiència' },
         { name: 'Harry White', role: 'COO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Especialista en operacions i optimització de processos empresarials' },
@@ -31,7 +31,7 @@ export default function TeamPage() {
                                     alt={member.name}
                                     width={96}
                                     height={96}
-                                    className="rounded-full mx-auto mb-4 border-2 border-white"
+                                    className="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-white object-cover"
                                 />
                                 <h3 className="text-2xl font-semibold">{member.name}</h3>
                                 <p className="text-lg text-gray-300">{member.role}</p>
