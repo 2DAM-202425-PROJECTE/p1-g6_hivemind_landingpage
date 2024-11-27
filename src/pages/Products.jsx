@@ -207,8 +207,7 @@ export default function ProductsContent() {
               </div>
             </div>
           </div>
-        </
-div>
+        </div>
       </div>
     </div>
   );
