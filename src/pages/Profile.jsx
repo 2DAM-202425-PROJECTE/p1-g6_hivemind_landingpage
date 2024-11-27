@@ -15,6 +15,7 @@ const Profile = () => {
   const [activationCode, setActivationCode] = useState('');
   const [activatedProducts, setActivatedProducts] = useState([]);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [isInvalidPopupVisible, setIsInvalidPopupVisible] = useState(false);
   const [activatedProduct, setActivatedProduct] = useState('');
 
   const handleInputChange = (e) => {
@@ -43,16 +44,23 @@ const Profile = () => {
   };
 
   const handleActivateCode = () => {
-    if (activationCode) {
+    const codePattern = /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/i;
+    if (activationCode.match(codePattern)) {
       setActivatedProducts((prev) => [...prev, activationCode]);
       setActivatedProduct('Product Name'); // Replace with actual product name
       setActivationCode('');
       setIsPopupVisible(true);
+    } else {
+      setIsInvalidPopupVisible(true);
     }
   };
 
   const closePopup = () => {
     setIsPopupVisible(false);
+  };
+
+  const closeInvalidPopup = () => {
+    setIsInvalidPopupVisible(false);
   };
 
   return (
@@ -72,9 +80,8 @@ const Profile = () => {
                 <input
                   type="file"
                   id="profile-pic"
-                  accept="image/*"
-                  onChange={handleProfilePicChange}
                   className="hidden"
+                  onChange={handleProfilePicChange}
                 />
               </label>
               <button
@@ -226,6 +233,21 @@ const Profile = () => {
             <p className="text-2xl font-bold">{activationCode}</p>
             <button
               onClick={closePopup}
+              className="mt-4 px-4 py-2 bg-white text-black rounded-lg"
+            >
+              Tanca
+            </button>
+          </div>
+        </div>
+      )}
+
+      {isInvalidPopupVisible && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+          <div className="bg-black p-6 rounded-lg shadow-lg text-center text-white">
+            <h2 className="text-2xl font-bold mb-4">Codi Invàlid</h2>
+            <p className="text-2xl font-bold">El codi no és vàlid. Si us plau, introdueix un codi real.</p>
+            <button
+              onClick={closeInvalidPopup}
               className="mt-4 px-4 py-2 bg-white text-black rounded-lg"
             >
               Tanca
