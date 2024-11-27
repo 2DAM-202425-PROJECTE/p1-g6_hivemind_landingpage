@@ -17,15 +17,15 @@ export default function TeamPage() {
     ];
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="relative flex flex-col min-h-screen text-white">
             <div className="hero-background"/>
             <main className="flex-grow flex flex-col justify-center items-center relative z-10">
-                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-blue-950/80 backdrop-blur-lg rounded-3xl my-8">
-                    <h1 className="text-5xl font-extrabold text-center mb-8 text-white animate-fade-in">El nostre equip</h1>
+                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-900 rounded-3xl my-8">
+                    <h1 className="text-5xl font-extrabold text-center mb-8 text-white">El nostre equip</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {teamMembers.map((member) => (
                             <div key={member.name}
-                                 className="bg-white/10 backdrop-blur-3xl rounded-3xl shadow-lg p-6 text-center text-white transition-transform transform hover:scale-105 hover:shadow-2xl animate-slide-up">
+                                 className="bg-gray-800 rounded-3xl shadow-lg p-6 text-center text-white transition-transform transform hover:scale-105 hover:shadow-2xl">
                                 <img
                                     src={member.imageUrl}
                                     alt={member.name}
@@ -41,11 +41,11 @@ export default function TeamPage() {
                     </div>
                 </section>
 
-                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-900/80 backdrop-blur-lg rounded-3xl my-8">
+                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-800 rounded-3xl my-8">
                     <h2 className="text-4xl font-bold text-center mb-8 text-white">Els nostres valors</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {companyValues.map((value, index) => (
-                            <div key={index} className="bg-gray-800/50 rounded-xl p-6 shadow-lg">
+                            <div key={index} className="bg-gray-700 rounded-xl p-6 shadow-lg">
                                 <h3 className="text-2xl font-semibold text-white mb-2">{value.title}</h3>
                                 <p className="text-gray-300">{value.description}</p>
                             </div>
@@ -53,7 +53,7 @@ export default function TeamPage() {
                     </div>
                 </section>
 
-                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-blue-900/80 backdrop-blur-lg rounded-3xl my-8">
+                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-900 rounded-3xl my-8">
                     <h2 className="text-4xl font-bold text-center mb-8 text-white">La nostra missió</h2>
                     <p className="text-xl text-center text-gray-300 mb-8">
                         A HiveMind, la nostra missió és crear una plataforma innovadora que connecti persones i idees,
@@ -66,7 +66,7 @@ export default function TeamPage() {
                     </div>
                 </section>
 
-                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-800/80 backdrop-blur-lg rounded-3xl my-8">
+                <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-800 rounded-3xl my-8">
                     <h2 className="text-4xl font-bold text-center mb-8 text-white">Uneix-te al nostre equip</h2>
                     <p className="text-xl text-center text-gray-300 mb-8">
                         Estem sempre buscant talent apassionat i creatiu per unir-se a la nostra missió.
@@ -79,46 +79,6 @@ export default function TeamPage() {
                     </div>
                 </section>
             </main>
-
-            <style>{`
-                @keyframes fade-in {
-                    from { opacity: 0; }
-                    to { opacity: 1; }
-                }
-
-                @keyframes slide-up {
-                    from {
-                        transform: translateY(20px);
-                        opacity: 0;
-                    }
-                    to {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-                }
-
-                .animate-fade-in {
-                    animation: fade-in 1s ease-in-out;
-                }
-
-                .animate-slide-up {
-                    animation: slide-up 0.5s ease-in-out;
-                }
-
-                .hero-background {
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/fondo.webp');
-                    background-size: cover;
-                    background-position: center;
-                    background-attachment: fixed;
-                    width: 100%;
-                    height: 100%;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                }
-            `}</style>
         </div>
     );
 }
-

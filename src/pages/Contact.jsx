@@ -67,10 +67,10 @@ const Contact = () => {
     };
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="relative flex flex-col min-h-screen text-white">
             <div className="hero-background" />
             <div className="flex-grow flex flex-col justify-center items-center relative z-10 px-4 py-12">
-                <div className="w-full max-w-2xl bg-blue-950 rounded-3xl p-8 md:p-12 shadow-2xl">
+                <div className="w-full max-w-2xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
                     <h2 className="text-4xl text-white text-center mb-8 font-bold">Contacte</h2>
                     <p className="text-xl text-center w-full text-white mb-8">
                         Contacta amb nosaltres per a qualsevol dubte o suggeriment. Estarem encantats
@@ -94,7 +94,7 @@ const Contact = () => {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className={`shadow appearance-none border ${errors.name ? 'border-red-500' : 'border-transparent'} bg-black/60 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
+                                className={`shadow appearance-none border ${errors.name ? 'border-red-500' : 'border-transparent'} bg-gray-800 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
                                 placeholder="ex. John Doe"
                                 required
                                 aria-invalid={errors.name ? 'true' : 'false'}
@@ -117,7 +117,7 @@ const Contact = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className={`shadow appearance-none border ${errors.email ? 'border-red-500' : 'border-transparent'} bg-black/60 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
+                                className={`shadow appearance-none border ${errors.email ? 'border-red-500' : 'border-transparent'} bg-gray-800 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
                                 placeholder="ex. jdoe@hivemind.com"
                                 required
                                 aria-invalid={errors.email ? 'true' : 'false'}
@@ -139,7 +139,7 @@ const Contact = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                className={`shadow appearance-none border ${errors.message ? 'border-red-500' : 'border-transparent'} bg-black/60 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
+                                className={`shadow appearance-none border ${errors.message ? 'border-red-500' : 'border-transparent'} bg-gray-800 rounded-3xl w-full py-3 px-4 text-white placeholder:text-white/70 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition duration-300`}
                                 rows="5"
                                 placeholder="El teu missatge aquí..."
                                 required
@@ -153,7 +153,7 @@ const Contact = () => {
                         <div className="flex items-center justify-between space-x-4">
                             <button
                                 type="submit"
-                                className="bg-white hover:bg-gray-200 text-blue-950 font-bold py-3 px-6 rounded-3xl focus:outline-none focus:ring-2 focus:ring-white/50 transition duration-300 flex-grow"
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-3xl focus:outline-none focus:ring-2 focus:ring-white/50 transition duration-300 flex-grow"
                                 disabled={isLoading}
                             >
                                 {isLoading ? 'Enviant...' : 'Enviar'}
@@ -175,23 +175,8 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
-            <style jsx>{`
-                .hero-background {
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/fondo.webp');
-                    background-size: cover;
-                    background-position: center;
-                    background-attachment: fixed;
-                    width: 100%;
-                    height: 100%;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                }
-            `}</style>
         </div>
     );
 };
 
 export default Contact;
-
