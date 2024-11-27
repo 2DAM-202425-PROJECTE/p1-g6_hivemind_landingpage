@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function ProductsContent() {
   return (
-    <div className="relative flex flex-col items-start justify-start text-white hivemind-hero-section mt-10">
+    <div className="relative flex flex-col items-start justify-start text-white hivemind-hero-section mt-10 max-w-screen-lg mx-auto">
       <div className="hero-background" />
       <div className="w-full h-full relative pt-10 text-left rounded-3xl">
         <Link to="/" />
