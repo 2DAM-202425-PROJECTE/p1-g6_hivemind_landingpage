@@ -56,9 +56,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center text-gray-900 p-8">
+    <div className="relative flex flex-col items-center text-white p-8">
       <div className="hero-background"/>
-      <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
+      <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5 bg-gray-900">
         <div className="relative mb-8 flex flex-col items-center justify-center">
           <img
             src={profile.profilePic}
@@ -122,7 +122,7 @@ const Profile = () => {
               className="w-full p-3 rounded-md text-white bg-black border border-gray-300 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           ) : (
-            <p className="text-gray-400">{profile.bio}</p>
+            <p className="text-gray-300">{profile.bio}</p>
           )}
         </div>
 
@@ -156,9 +156,9 @@ const Profile = () => {
             </>
           ) : (
             <>
-              <p className="text-gray-400 mt-3">Location: {profile.location}</p>
-              <p className="text-gray-400 mt-3">Website: <a href={profile.website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{profile.website}</a></p>
-              <p className="text-gray-400 mt-3">Hobbies: {profile.hobbies}</p>
+              <p className="text-gray-300 mt-3">Location: {profile.location}</p>
+              <p className="text-gray-300 mt-3">Website: <a href={profile.website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{profile.website}</a></p>
+              <p className="text-gray-300 mt-3">Hobbies: {profile.hobbies}</p>
             </>
           )}
         </div>
@@ -202,7 +202,7 @@ const Profile = () => {
             />
             <button
               onClick={handleActivateCode}
-              className="mt-4 px-4 py-2 bg-black rounded-lg text-white"
+              className="mt-4 px-4 py-2 bg-blue-600 rounded-lg text-white"
             >
               Activa
             </button>

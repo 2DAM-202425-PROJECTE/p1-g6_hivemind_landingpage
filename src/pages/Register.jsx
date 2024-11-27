@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/footer"; // Import the Footer component
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -16,9 +17,9 @@ const Register = () => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative min-h-screen flex flex-col">
             <div className="hero-background" />
-            <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
+            <div className="flex-grow w-full h-full relative pt-10 text-left backdrop-blur-2xl rounded-3xl p-5 bg-gray-900">
                 <h2 className="text-3xl text-white text-center mb-10 font-bold">Crea el teu Compte</h2>
                 <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg bg-opacity-60 bg-black form-transparent">
                     <div className="mb-4">
@@ -88,4 +89,3 @@ const Register = () => {
 };
 
 export default Register;
- 
