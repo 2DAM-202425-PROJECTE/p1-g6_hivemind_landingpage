@@ -69,7 +69,7 @@ const Contact = () => {
     return (
         <div className="relative flex flex-col min-h-screen text-white">
             <div className="hero-background" />
-            <div className="flex-grow flex flex-col justify-center items-center relative z-10 px-4 py-12">
+            <div className="flex-grow flex flex-col justify-center items-center relative px-4 py-12">
                 <div className="w-full max-w-2xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
                     <h2 className="text-4xl text-white text-center mb-8 font-bold">Contacte</h2>
                     <p className="text-xl text-center w-full text-white mb-8">
