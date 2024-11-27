@@ -20,12 +20,11 @@ const Login = () => {
     };
 
     return (
-        <div className="relative min-h-screen flex flex-col">
+        <div className="relative min-h-screen flex flex-col items-center justify-center text-white">
             <div className="hero-background" />
-            <div className="flex-grow w-full h-full relative pt-10 text-left backdrop-blur-2xl rounded-3xl p-5 bg-gray-900">
+            <div className="w-full max-w-lg bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
                 <h2 className="text-3xl text-white text-center mb-10 font-bold">Inicia sessió</h2>
-                <form onSubmit={handleSubmit}
-                      className="max-w-lg mx-auto p-8 rounded-3xl shadow-lg bg-opacity-60 bg-black form-transparent">
+                <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="mb-4">
                         <label className="block text-white text-sm font-bold mb-2" htmlFor="username">
                             Nom d'usuari
