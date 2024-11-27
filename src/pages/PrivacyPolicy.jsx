@@ -2,102 +2,86 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
     return (
-        <div className="relative flex flex-col items-start justify-start text-white mt-10">
-            <div className="hero-background"/>
-            <div className="w-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
-                <div className="container mx-auto p-6">
-                    <h1 className="text-4xl font-bold text-center mb-8">Privacy Policy</h1>
+        <div className="relative flex flex-col min-h-screen text-white">
+            <div className="hero-background" />
+            <div className="flex-grow flex flex-col justify-center items-center relative px-4 py-12">
+                <div className="w-full max-w-2xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
+                    <h1 className="text-4xl font-bold text-center mb-8">Política de Privacitat</h1>
 
                     <section className="mb-6">
-                        <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Introducció</h2>
                         <p>
-                            This privacy policy explains how we collect, use, disclose, and protect your personal
-                            information when
-                            you visit our website or use our services. We encourage you to read it carefully to
-                            understand
-                            our
-                            practices regarding your personal data.
+                            Aquesta política de privacitat explica com recollim, utilitzem, divulguem i protegim la teva informació personal quan visites el nostre lloc web o utilitzes els nostres serveis. T'encoratgem a llegir-la atentament per entendre les nostres pràctiques respecte a les teves dades personals.
                         </p>
                     </section>
                     <section className="mb-6">
-                        <h2 className="text-2xl font-semibold mb-2">Information We Collect</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Informació que Recollim</h2>
                         <p>
-                            We collect various types of information depending on how you interact with us, including:
+                            Recollim diversos tipus d'informació depenent de com interactues amb nosaltres, incloent:
                         </p>
                         <ul className="list-disc pl-5">
-                            <li>Personally identifiable information, such as your name, email address, etc.</li>
-                            <li>Usage data, such as IP address, browser type, etc.</li>
-                            <li>Cookie information (as described in our cookie policy).</li>
+                            <li>Informació personal identificable, com el teu nom, adreça de correu electrònic, etc.</li>
+                            <li>Dades d'ús, com l'adreça IP, tipus de navegador, etc.</li>
+                            <li>Informació de cookies (tal com es descriu en la nostra política de cookies).</li>
                         </ul>
                     </section>
 
                     <section className="mb-6">
-                        <h2 className="text-2xl font-semibold mb-2">How We Use Information</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Com Utilitzem la Informació</h2>
                         <p>
-                            We use the information collected for the following purposes:
+                            Utilitzem la informació recollida per als següents propòsits:
                         </p>
                         <ul className="list-disc pl-5">
-                            <li>To provide and personalize our services.</li>
-                            <li>To improve website functionality and user experience.</li>
-                            <li>To send communications related to your account or requested services.</li>
-                            <li>To comply with our legal obligations.</li>
+                            <li>Per proporcionar i personalitzar els nostres serveis.</li>
+                            <li>Per millorar la funcionalitat del lloc web i l'experiència de l'usuari.</li>
+                            <li>Per enviar comunicacions relacionades amb el teu compte o serveis sol·licitats.</li>
+                            <li>Per complir amb les nostres obligacions legals.</li>
                         </ul>
                     </section>
 
                     <section className="mb-6">
-                        <h2 className="text-2xl font-semibold mb-2">How We Protect Your Information</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Com Protegim la Teva Informació</h2>
                         <p>
-                            We implement appropriate security measures to protect your personal information from
-                            unauthorized access, alteration, or disclosure.
-                            However, you should be aware that no data transmission over the Internet or electronic
-                            storage
-                            is completely secure.
+                            Implementem mesures de seguretat adequades per protegir la teva informació personal contra l'accés no autoritzat, l'alteració o la divulgació. No obstant això, has de ser conscient que cap transmissió de dades per Internet o emmagatzematge electrònic és completament segur.
                         </p>
                     </section>
 
                     <section className="mb-6">
-                        <h2 className="text-2xl font-semibold mb-2">Sharing Your Information</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Compartir la Teva Informació</h2>
                         <p>
-                            We do not share your personal information with third parties, except in the following cases:
+                            No compartim la teva informació personal amb tercers, excepte en els següents casos:
                         </p>
                         <ul className="list-disc pl-5">
-                            <li>With service providers who help us operate our website.</li>
-                            <li>To comply with legal requirements or respond to government requests.</li>
+                            <li>Amb proveïdors de serveis que ens ajuden a operar el nostre lloc web.</li>
+                            <li>Per complir amb els requisits legals o respondre a sol·licituds governamentals.</li>
                         </ul>
                     </section>
 
                     <section className="mb-6">
-                        <h2 className="text-2xl font-semibold mb-2">Your Rights</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Els Teus Drets</h2>
                         <p>
-                            You have the right to access, correct, or delete the personal information we have collected
-                            about you. You can also object to certain
-                            uses of your personal information, such as direct marketing.
+                            Tens el dret d'accedir, corregir o eliminar la informació personal que hem recollit sobre tu. També pots oposar-te a certs usos de la teva informació personal, com el màrqueting directe.
                         </p>
                         <p>
-                            If you wish to exercise any of these rights, you can contact us through the means provided
-                            at
-                            the end of this policy.
+                            Si desitges exercir algun d'aquests drets, pots contactar-nos a través dels mitjans proporcionats al final d'aquesta política.
                         </p>
                     </section>
 
                     <section className="mb-6">
-                        <h2 className="text-2xl font-semibold mb-2">Changes to This Policy</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Canvis en Aquesta Política</h2>
                         <p>
-                            We may update this privacy policy from time to time. We will notify you of any important
-                            changes
-                            by posting the new policy
-                            on this page. We recommend reviewing this policy periodically.
+                            Podem actualitzar aquesta política de privacitat de tant en tant. T'informarem de qualsevol canvi important publicant la nova política en aquesta pàgina. Et recomanem revisar aquesta política periòdicament.
                         </p>
                     </section>
 
                     <section className="mb-6">
-                        <h2 className="text-2xl font-semibold mb-2">Contact</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Contacte</h2>
                         <p>
-                            If you have any questions or concerns about this privacy policy, please contact us at:
+                            Si tens alguna pregunta o preocupació sobre aquesta política de privacitat, si us plau, contacta'ns a:
                         </p>
                         <address className="font-semibold">
                             hivemind@nexxus.com<br/>
-                            Calle Falsa 123, Tortosa, Spain
+                            Calle Falsa 123, Tortosa, Espanya
                         </address>
                     </section>
                 </div>
@@ -106,4 +90,4 @@ const PrivacyPolicy = () => {
     );
 };
 
-            export default PrivacyPolicy;
+export default PrivacyPolicy;

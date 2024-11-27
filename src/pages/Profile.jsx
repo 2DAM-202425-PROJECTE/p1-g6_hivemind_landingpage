@@ -6,10 +6,10 @@ const Profile = () => {
   const [profile, setProfile] = useState({
     username: 'John Doe',
     email: 'john@example.com',
-    bio: 'Frontend developer passionate about creating beautiful and functional web applications.',
-    location: 'New York, USA',
+    bio: 'Example bio text',
+    location: 'Example City, Country',
     website: 'https://johndoe.com',
-    hobbies: 'Coding, Hiking, Photography',
+    hobbies: 'Example hobby',
     profilePic: '/placeholder.svg',
   });
   const [activationCode, setActivationCode] = useState('');
@@ -46,10 +46,14 @@ const Profile = () => {
   const handleActivateCode = () => {
     const codePattern = /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/i;
     if (activationCode.match(codePattern)) {
-      setActivatedProducts((prev) => [...prev, activationCode]);
-      setActivatedProduct('Product Name'); // Replace with actual product name
-      setActivationCode('');
-      setIsPopupVisible(true);
+      if (!activatedProducts.includes(activationCode)) {
+        setActivatedProducts((prev) => [...prev, activationCode]);
+        setActivatedProduct('Product Name'); // Replace with actual product name
+        setActivationCode('');
+        setIsPopupVisible(true);
+      } else {
+        setIsInvalidPopupVisible(true);
+      }
     } else {
       setIsInvalidPopupVisible(true);
     }

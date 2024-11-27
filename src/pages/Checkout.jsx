@@ -18,9 +18,9 @@ export default function Checkout() {
   const activationCode = generateActivationCode();
 
   return (
-    <div className="relative flex flex-col items-start justify-start text-white mt-10">
+    <div className="relative min-h-screen flex flex-col items-center justify-center text-white">
       <div className="hero-background" />
-      <div className="w-full h-full relative z-10 pt-10 text-left backdrop-blur-2xl rounded-3xl p-5">
+      <div className="w-full max-w-lg bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
         <h1 className="text-4xl">Checkout</h1>
         <p className="mt-6 text-xl text-center">
           Has comprat el producte: <strong>{product}</strong> per <strong>{price}€</strong>.
