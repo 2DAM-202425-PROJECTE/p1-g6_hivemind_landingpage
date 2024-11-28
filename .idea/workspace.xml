@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/features.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/features.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/newsletter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/testimonis.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/testimonis.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +94,8 @@
       <workItem from="1732719981008" duration="632000" />
       <workItem from="1732720923199" duration="25000" />
       <workItem from="1732731788888" duration="5368000" />
+      <workItem from="1732737163414" duration="1513000" />
+      <workItem from="1732815390985" duration="2647000" />
     </task>
     <task id="LOCAL-00001" summary="in progress">
       <option name="closed" value="true" />
