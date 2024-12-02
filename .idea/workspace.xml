@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/components/newsletter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact.jsx" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/features.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/features.jsx" afterDir="false" />
+>>>>>>> 2fe7dcca3ae96ac023879aee67a191a12e7661ef
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

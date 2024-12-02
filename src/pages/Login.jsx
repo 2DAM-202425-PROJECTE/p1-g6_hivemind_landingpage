@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Footer from "../components/footer"; // Import the Footer component
+import DOMPurify from "dompurify";
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -10,7 +10,10 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/login', { username, password })
+        const sanitizedUsername = DOMPurify.sanitize(username);
+        const sanitizedPassword = DOMPurify.sanitize(password);
+
+        axios.post('http://localhost:3001/login', { username: sanitizedUsername, password: sanitizedPassword })
             .then(result => {
                 if (result.data === "Success") {
                     navigate('/profile');

@@ -17,7 +17,7 @@ export default function FeaturesSection() {
                                 Connecta, col·labora i juga amb una comunitat de jugadors dins d'un ecosistema digital pensat per a tu.
                             </p>
                             <a href="/products"
-                               className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-700 lg:justify-start hover:text-indigo-700">
+                               className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-blue-500 lg:justify-start hover:text-indigo-700">
                                 Descobreix més <FaRocket size={20} />
                             </a>
                         </div>
@@ -28,8 +28,8 @@ export default function FeaturesSection() {
                             <div className="bg-white rounded-full flex justify-center items-center mb-5 w-14 h-14">
                                 <FaGamepad size={30} color="#4F46E5" />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 mb-3 capitalize group-hover:text-white">Comunicació en temps real</h4>
-                            <p className="text-sm font-normal text-gray-900 leading-5 group-hover:text-white mb-5">
+                            <h4 className="text-xl font-semibold text-white mb-3 capitalize">Comunicació en temps real</h4>
+                            <p className="text-sm font-normal text-white leading-5 mb-5">
                                 Mantingues la connexió amb els teus amics i altres jugadors mitjançant missatges i trucades de vídeo dins de la plataforma.
                             </p>
                         </div>
@@ -39,8 +39,8 @@ export default function FeaturesSection() {
                             <div className="bg-white rounded-full flex justify-center items-center mb-5 w-14 h-14">
                                 <FaUsers size={30} color="#4F46E5" />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 mb-3 capitalize group-hover:text-white">Perfils personalitzables</h4>
-                            <p className="text-sm font-normal text-gray-900 leading-5 group-hover:text-white mb-5">
+                            <h4 className="text-xl font-semibold text-white mb-3 capitalize">Perfils personalitzables</h4>
+                            <p className="text-sm font-normal text-white leading-5 mb-5">
                                 Guanya crèdits jugant i interactuant per desbloquejar recompenses exclusives i personalitzar el teu perfil amb contingut únic.
                             </p>
                         </div>
@@ -50,8 +50,8 @@ export default function FeaturesSection() {
                             <div className="bg-white rounded-full flex justify-center items-center mb-5 w-14 h-14">
                                 <FaRocket size={30} color="#4F46E5" />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 mb-3 capitalize group-hover:text-white">Esdeveniments en temps real</h4>
-                            <p className="text-sm font-normal text-gray-900 leading-5 group-hover:text-white mb-5">
+                            <h4 className="text-xl font-semibold text-white mb-3 capitalize">Esdeveniments en temps real</h4>
+                            <p className="text-sm font-normal text-white leading-5 mb-5">
                                 Uneix-te a esdeveniments en directe, transmissions i events interactius amb altres usuaris i guanya recompenses per participar.
                             </p>
                         </div>
@@ -61,8 +61,8 @@ export default function FeaturesSection() {
                             <div className="bg-white rounded-full flex justify-center items-center mb-5 w-14 h-14">
                                 <FaClipboardList size={30} color="#4F46E5" />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 mb-3 capitalize group-hover:text-white">Comunitats de joc</h4>
-                            <p className="text-sm font-normal text-gray-900 leading-5 group-hover:text-white mb-5">
+                            <h4 className="text-xl font-semibold text-white mb-3 capitalize">Comunitats de joc</h4>
+                            <p className="text-sm font-normal text-white leading-5 mb-5">
                                 Connecta amb altres jugadors amb els mateixos interessos, uneix-te a grups i comparteix experiències dins d'un entorn comunitari ric.
                             </p>
                         </div>
