@@ -1,4 +1,3 @@
-// hivemind-project/src/components/faqs.jsx
 import React, { useState } from 'react';
 
 const faqsData = [
@@ -28,26 +27,29 @@ const Faqs = () => {
     };
 
     return (
-        <section className="bg-orange-300 p-4 rounded-3xl mt-5">
-            <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-extrabold text-white mb-6">Preguntes freqüents</h2>
-                <div className="space-y-4">
-                    {faqsData.map((faq, index) => (
-                        <div key={index} className="bg-white/20 p-6 rounded-2xl shadow-lg mb-4">
-                            <button
-                                className="w-full text-left text-xl font-semibold text-gray-900 flex justify-between items-center"
-                                onClick={() => toggleFaq(index)}
-                            >
-                                {faq.question}
-                                <span className="text-2xl right">
-                                    {activeIndex === index ? '➖' : '➕'}
-                                </span>
-                            </button>
-                            {activeIndex === index && (
-                                <p className="mt-4 text-lg text-black">{faq.answer}</p>
-                            )}
-                        </div>
-                    ))}
+        <section className="relative flex flex-col min-h-screen text-white">
+            <div className="hero-background" />
+            <div className="flex-grow flex flex-col justify-center items-center relative px-4 py-12">
+                <div className="w-full max-w-4xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
+                    <h2 className="text-4xl font-extrabold text-white mb-6">Preguntes freqüents</h2>
+                    <div className="space-y-4">
+                        {faqsData.map((faq, index) => (
+                            <div key={index} className="bg-white/20 p-6 rounded-2xl shadow-lg mb-4">
+                                <button
+                                    className="w-full text-left text-xl font-semibold text-white flex justify-between items-center"
+                                    onClick={() => toggleFaq(index)}
+                                >
+                                    {faq.question}
+                                    <span className="text-2xl right">
+                                        {activeIndex === index ? '➖' : '➕'}
+                                    </span>
+                                </button>
+                                {activeIndex === index && (
+                                    <p className="mt-4 text-lg text-white">{faq.answer}</p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
