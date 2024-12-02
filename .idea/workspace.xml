@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress" />
+    <list default="true" id="d336ea22-aa81-4203-a75e-d77c5bc03b34" name="Changes" comment="in progress">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/newsletter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +95,7 @@
       <workItem from="1732737163414" duration="1513000" />
       <workItem from="1732815390985" duration="3804000" />
       <workItem from="1732902623127" duration="849000" />
-      <workItem from="1733162276375" duration="444000" />
+      <workItem from="1733162276375" duration="2326000" />
     </task>
     <task id="LOCAL-00001" summary="in progress">
       <option name="closed" value="true" />

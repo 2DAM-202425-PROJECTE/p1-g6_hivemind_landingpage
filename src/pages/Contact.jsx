@@ -47,7 +47,7 @@ const Contact = () => {
         } else {
             setIsLoading(true);
             try {
-                await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID');
+                await emailjs.send('service_eeni5sd', 'template_2vuslui', formData, 'Tjq1cp43LrXoEdW8G');
                 setSuccessMessage('Correu enviat correctament!');
                 setErrors({});
                 setFormData({ name: '', email: '', message: '' });

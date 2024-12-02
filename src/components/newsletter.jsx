@@ -30,9 +30,11 @@ function Newsletter() {
                         Estigues al dia de les últimes novetats
                     </p>
                     <p className="max-w-3xl mt-5 mx-auto text-base sm:text-lg md:text-xl text-gray-300 text-center">
-                        Subscriu-te al nostre butlletí i estigues al dia de les últimes novetats, notícies, actualitzacions i ofertes exclusives. Uneix-te a la nostra comunitat avui!
+                        Subscriu-te al nostre butlletí i estigues al dia de les últimes novetats, notícies,
+                        actualitzacions i ofertes exclusives. Uneix-te a la nostra comunitat avui!
                     </p>
-                    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto w-full p-4 sm:p-5 bg-white/20 rounded-3xl shadow-lg mt-8">
+                    <form onSubmit={handleSubmit}
+                          className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto w-full p-4 sm:p-5 bg-white/20 rounded-3xl shadow-lg mt-8">
                         <input
                             type="email"
                             value={email}
