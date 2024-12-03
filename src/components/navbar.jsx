@@ -1,6 +1,6 @@
-import { Disclosure, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import {Disclosure, Menu, MenuButton, MenuItem, MenuItems, Transition} from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { useState, useEffect } from 'react';
+import {useState, useEffect, Fragment} from 'react';
 
 export default function NavigationBar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -42,43 +42,33 @@ export default function NavigationBar() {
             <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between">
                     {/* Menu hamburguesa en pantallas pequeñas */}
-                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden z-20">
-                        <Disclosure>
-                            {({ open }) => (
-                                <>
-                                    <Disclosure.Button
-                                        className="inline-flex items-center justify-center rounded-3xl p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                                    >
-                                        <span className="sr-only">Obrir el menú principal</span>
-                                        {open ? (
-                                            <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                                        ) : (
-                                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                                        )}
-                                    </Disclosure.Button>
-                                    <Disclosure.Panel className="absolute left-0 z-50 mt-12 w-48 rounded-3xl bg-gray-800 shadow-lg">
-                                        <div className="space-y-1 px-2 pb-3 pt-2">
-                                            {navigation.map((item) => (
-                                                <Disclosure.Button
-                                                    key={item.name}
-                                                    as="a"
-                                                    href={item.href}
-                                                    className={classNames(
-                                                        item.current
-                                                            ? 'bg-gray-900 text-white'
-                                                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                        'block rounded-md px-3 py-2 text-base font-medium'
-                                                    )}
-                                                    aria-current={item.current ? 'page' : undefined}
-                                                >
-                                                    {item.name}
-                                                </Disclosure.Button>
-                                            ))}
-                                        </div>
-                                    </Disclosure.Panel>
-                                </>
-                            )}
-                        </Disclosure>
+                    <div className="flex sm:hidden">
+                        <Menu as="div" className="relative">
+                            <div>
+                                <MenuButton
+                                    className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                >
+                                    <span className="sr-only">Obrir el menú principal</span>
+                                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                                </MenuButton>
+                            </div>
+                            <MenuItems className="absolute left-0 mt-2 w-48 origin-top-right rounded-3xl bg-black py-1 shadow-lg ring-1 ring-white ring-opacity-5">
+                                {navigation.map((item) => (
+                                    <MenuItem key={item.name}>
+                                        <a
+                                            href={item.href}
+                                            className={classNames(
+                                                item.current ? 'text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                'block px-4 py-2 text-sm font-medium'
+                                            )}
+                                            aria-current={item.current ? 'page' : undefined}
+                                        >
+                                            {item.name}
+                                        </a>
+                                    </MenuItem>
+                                ))}
+                            </MenuItems>
+                        </Menu>
                     </div>
 
                     {/* Logo en el lado izquierdo */}
@@ -126,35 +116,18 @@ export default function NavigationBar() {
                                     />
                                 </MenuButton>
                             </div>
-                            <MenuItems className="absolute right-0 mt-2 w-48 origin-top-right rounded-3xl bg-black py-1 shadow-lg ring-1 ring-white ring-opacity-5">
+                            <MenuItems
+                                className="absolute right-0 mt-2 w-48 origin-top-right rounded-3xl bg-black py-1 shadow-lg ring-1 ring-white ring-opacity-5">
                                 <MenuItem>
                                     <a href="/profile" className="block px-4 py-2 text-sm text-white">El teu perfil</a>
                                 </MenuItem>
-                                <MenuItem><a href="/login" className="block px-4 py-2 text-sm text-white">Inicia sessió</a></MenuItem>
+                                <MenuItem><a href="/login" className="block px-4 py-2 text-sm text-white">Inicia
+                                    sessió</a></MenuItem>
                             </MenuItems>
                         </Menu>
                     </div>
                 </div>
             </div>
-            {/* Para móviles */}
-            <Disclosure.Panel className="sm:hidden">
-                <div className="space-y-1 px-2 pb-3 pt-2">
-                    {navigation.map((item) => (
-                        <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            aria-current={item.current ? 'page' : undefined}
-                            className={classNames(
-                                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                'block rounded-md px-3 py-2 text-base font-medium'
-                            )}
-                        >
-                            {item.name}
-                        </Disclosure.Button>
-                    ))}
-                </div>
-            </Disclosure.Panel>
         </Disclosure>
     );
 }
