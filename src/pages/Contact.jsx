@@ -19,7 +19,6 @@ const Contact = () => {
             ...prevData,
             [name]: value,
         }));
-        // Clear error when user starts typing
         if (errors[name]) {
             setErrors((prevErrors) => ({
                 ...prevErrors,
@@ -43,14 +42,12 @@ const Contact = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // Validate inputs
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
             return;
         }
 
-        // Sanitize inputs
         const sanitizedData = {
             name: DOMPurify.sanitize(formData.name),
             email: DOMPurify.sanitize(formData.email),
@@ -59,26 +56,16 @@ const Contact = () => {
 
         setIsLoading(true);
 
-        // Send email using EmailJS
         emailjs.send('service_jqct0fo', 'template_cqnp0hi', sanitizedData, 'Lex0DDJSKCMoCfwwE')
             .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                setSuccessMessage('Your message has been sent successfully!');
+                setSuccessMessage('El teu missatge s\'ha enviat correctament!');
                 setIsLoading(false);
-                // Reset form data
                 setFormData({ name: '', email: '', message: '' });
                 setErrors({});
-            }, (error) => {
-                console.log('FAILED...', error);
-                setErrors({ submit: 'Failed to send message. Please try again later.' });
+            }, () => {
+                setErrors({ submit: 'Error en enviar el missatge. Torna-ho a provar.' });
                 setIsLoading(false);
             });
-    };
-
-    const handleReset = () => {
-        setFormData({ name: '', email: '', message: '' });
-        setErrors({});
-        setSuccessMessage('');
     };
 
     return (
@@ -88,8 +75,7 @@ const Contact = () => {
                 <div className="w-full max-w-2xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
                     <h2 className="text-4xl text-white text-center mb-8 font-bold">Contacte</h2>
                     <p className="text-xl text-center w-full text-white mb-8">
-                        Contacta amb nosaltres per a qualsevol dubte o suggeriment. Estarem encantats
-                        d'ajudar-te!
+                        Contacta amb nosaltres per a qualsevol dubte o suggeriment. Estarem encantats d'ajudar-te!
                     </p>
                     {successMessage && <p className="text-green-500 text-center mb-4">{successMessage}</p>}
                     <form onSubmit={handleSubmit} className="space-y-6" noValidate>
@@ -103,7 +89,8 @@ const Contact = () => {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-full px-3 py-2 text-black"
+                                className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="El teu nom"
                             />
                             {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                         </div>
@@ -117,7 +104,8 @@ const Contact = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-3 py-2 text-black"
+                                className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="exemple@correu.com"
                             />
                             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                         </div>
@@ -130,11 +118,16 @@ const Contact = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full px-3 py-2 text-black"
+                                className="focus:border-white focus:border-opacity-50 text-white bg-opacity-60 bg-black shadow appearance-none border-4 rounded-3xl w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="Escriu el teu missatge..."
                             />
                             {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                         </div>
-                        <button type="submit" className="w-full bg-blue-500 text-white py-2 px-4 rounded" disabled={isLoading}>
+                        <button
+                            type="submit"
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline w-full"
+                            disabled={isLoading}
+                        >
                             {isLoading ? 'Enviant...' : 'Enviar'}
                         </button>
                         {errors.submit && <p className="text-red-500 text-center mt-4">{errors.submit}</p>}
