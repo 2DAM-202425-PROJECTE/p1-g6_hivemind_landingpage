@@ -27,8 +27,6 @@ const testimonis = [
 function Testimonis() {
     return (
         <section className="relative flex flex-col min-h-screen text-white">
-            {/* Fons */}
-            <div className="hero-background" />
             <div className="flex-grow flex flex-col justify-center items-center relative px-4 py-12">
                 <div className="w-full max-w-6xl bg-gray-900 rounded-2xl p-8 shadow-lg">
                     <h2 className="text-3xl font-extrabold text-white mb-6 text-center">Testimonis</h2>

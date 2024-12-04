@@ -73,11 +73,7 @@ export default function NavigationBar() {
 
                     {/* Logo en el lado izquierdo */}
                     <div className="flex items-center ml-10">
-                        <img
-                            alt="La teva empresa"
-                            src="hivemind_logo_nobg.png"
-                            className="h-8 w-auto"
-                        />
+                        <img alt="La teva empresa" src="hivemind_logo_nobg.png" width="32" height="16"/>
                     </div>
 
                     {/* Enlaces de navegación centrados */}
