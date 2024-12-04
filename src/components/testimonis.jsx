@@ -1,24 +1,24 @@
 import '../App.css';
 
-const testimonials = [
+const testimonis = [
     {
         name: "Maria Samntha",
-        profession: "Social influencer",
-        text: "I am having the best customer experience with this company. They are very professional and always deliver on time.",
+        profession: "Influencer social",
+        text: "Estic tenint la millor experiència com a client amb aquesta empresa. Són molt professionals i sempre lliuren a temps.",
         image: "https://www.famousbirthdays.com/headshots/maria-samantha-de-leon-3.jpg",
         rating: 5,
     },
     {
         name: "Lisa Cudrow",
-        profession: "Graphic Designer",
-        text: "The services are at very affordable price and the quality is top-notch. I would recommend this company to everyone.",
+        profession: "Dissenyadora gràfica",
+        text: "Els serveis tenen un preu molt assequible i la qualitat és excel·lent. Recomanaria aquesta empresa a tothom.",
         image: "https://cdn.britannica.com/62/248562-050-310A83C9/Lisa-Kudrow-Friends.jpg?w=400&h=300&c=crop",
         rating: 5,
     },
     {
         name: "John Smith",
-        profession: "Software Engineer",
-        text: "They are very professional with their API services and the documentation is very detailed. I am very happy with their services.",
+        profession: "Enginyer de software",
+        text: "Són molt professionals amb els seus serveis API i la documentació és molt detallada. Estic molt satisfet amb els seus serveis.",
         image: "https://cdn-images.dzcdn.net/images/artist/086f50bb1ce0e3033634e5e9c2d75462/1900x1900-000000-80-0-0.jpg",
         rating: 5,
     },
@@ -27,30 +27,30 @@ const testimonials = [
 function Testimonis() {
     return (
         <section className="relative flex flex-col min-h-screen text-white">
-            {/* Background */}
+            {/* Fons */}
             <div className="hero-background" />
             <div className="flex-grow flex flex-col justify-center items-center relative px-4 py-12">
                 <div className="w-full max-w-6xl bg-gray-900 rounded-2xl p-8 shadow-lg">
-                    <h2 className="text-3xl font-extrabold text-white mb-6 text-center">Testimonials</h2>
+                    <h2 className="text-3xl font-extrabold text-white mb-6 text-center">Testimonis</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {testimonials.map((testimonial, index) => (
+                        {testimonis.map((testimoni, index) => (
                             <div key={index} className="bg-white/20 p-6 rounded-xl shadow-md">
                                 <img
-                                    src={testimonial.image}
-                                    alt={testimonial.name}
+                                    src={testimoni.image}
+                                    alt={testimoni.name}
                                     className="rounded-full w-20 h-20 mb-4 object-cover border-2 border-primary mx-auto"
                                 />
-                                <h3 className="font-bold text-xl text-primary text-center">{testimonial.name}</h3>
-                                <p className="text-secondary text-center">{testimonial.profession}</p>
+                                <h3 className="font-bold text-xl text-primary text-center">{testimoni.name}</h3>
+                                <p className="text-secondary text-center">{testimoni.profession}</p>
                                 <p className="mt-2 text-lg italic text-secondary text-center">
-                                    &quot;{testimonial.text}&quot;
+                                    &quot;{testimoni.text}&quot;
                                 </p>
                                 <div
-                                    className="mt-2 text-yellow-500"
-                                    aria-label={`Rating: ${testimonial.rating} out of 5 stars`}
+                                    className="mt-2 text-yellow-500 text-center"
+                                    aria-label={`Valoració: ${testimoni.rating} de 5 estrelles`}
                                 >
-                                    {'★'.repeat(Math.floor(testimonial.rating))}
-                                    {'☆'.repeat(5 - Math.floor(testimonial.rating))}
+                                    {'★'.repeat(Math.floor(testimoni.rating))}
+                                    {'☆'.repeat(5 - Math.floor(testimoni.rating))}
                                 </div>
                             </div>
                         ))}
