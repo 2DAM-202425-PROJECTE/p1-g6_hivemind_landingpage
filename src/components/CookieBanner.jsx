@@ -12,8 +12,8 @@ const CookieBanner = () => {
     // Comprovar si l'usuari ja ha acceptat les cookies
     useEffect(() => {
         const cookiesAccepted = localStorage.getItem('cookies_accepted');
-        if (cookiesAccepted !== 'true') {
-            setIsVisible(true); // Mostrar el banner si no s'ha acceptat
+        if (cookiesAccepted === null) {
+            setIsVisible(true); // Mostrar el banner si no s'ha acceptat o denegat
         } else {
             const savedPreferences = JSON.parse(localStorage.getItem('cookie_preferences'));
             if (savedPreferences) {
