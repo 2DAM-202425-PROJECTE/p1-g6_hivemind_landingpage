@@ -28,7 +28,6 @@ const Faqs = () => {
 
     return (
         <section className="relative flex flex-col min-h-screen text-white">
-            <div className="hero-background" />
             <div className="flex-grow flex flex-col justify-center items-center relative px-4 py-12">
                 <div className="w-full max-w-4xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
                     <h2 className="text-4xl font-extrabold text-white mb-6">Preguntes freqüents</h2>

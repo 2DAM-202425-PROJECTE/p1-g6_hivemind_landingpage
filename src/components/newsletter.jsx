@@ -23,7 +23,7 @@ function Newsletter() {
         <section className="relative flex flex-col min-h-screen text-white ">
             <div className="flex-grow flex flex-col justify-center items-center relative px-4 py-12">
                 <div className="w-full max-w-4xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
-                    <h2 className="text-sm sm:text-base font-semibold text-[#a91079] tracking-wide uppercase text-center">
+                    <h2 className="text-sm sm:text-base font-semibold text-[#EB24AC] tracking-wide uppercase text-center">
                         Subscriu-te al Nostre Butlletí
                     </h2>
                     <p className="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-100 sm:tracking-tight text-center">
@@ -34,14 +34,14 @@ function Newsletter() {
                         actualitzacions i ofertes exclusives. Uneix-te a la nostra comunitat avui!
                     </p>
                     <form onSubmit={handleSubmit}
-                          className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto w-full p-4 sm:p-5 bg-white/20 rounded-3xl shadow-lg mt-8">
+                          className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto w-full p-4 sm:p-5 rounded-3xl mt-8">
                         <input
                             type="email"
                             value={email}
                             onChange={handleChange}
                             placeholder="Introdueix el teu correu electrònic"
-                            className="w-full bg-white/20 py-3 px-4 text-gray-900 placeholder-gray-700 rounded-3xl text-sm sm:text-base focus:outline-none"
-                        />
+                            className="w-full bg-white/60 py-3 px-4 text-[#1a202c] placeholder-gray-700 rounded-3xl text-sm sm:text-base focus:outline-none"
+                            />
                         <button
                             type="submit"
                             className="w-full sm:w-auto bg-[#1e3a8a] hover:bg-[#1c2c5b] text-white text-sm sm:text-base font-semibold tracking-wide py-3 rounded-3xl px-6 focus:outline-none">
