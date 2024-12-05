@@ -2,7 +2,7 @@ import { FaGamepad, FaUsers, FaRocket, FaClipboardList } from 'react-icons/fa';
 
 export default function FeaturesSection() {
     return (
-        <section className="relative flex flex-col min-h-screen text-white">
+        <section id="features" className="relative flex flex-col min-h-screen text-white">
             <div className="flex-grow flex flex-col justify-center items-center relative px-4 py-12">
                 <div className="w-full max-w-4xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
                     <div className="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
