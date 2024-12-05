@@ -5,7 +5,7 @@ export default function TeamPage() {
     const teamMembers = [
         { name: 'Radostin Ivanov', role: 'CEO', imageUrl: '/teams/radostin.jpg', description: 'Desenvolupador principal del projecte, amb estudis de SMX i DAM' },
         { name: 'Gerard Moreno', role: 'CTO', imageUrl: '/teams/gerard.png', description: 'Mantenidor del front end amb experiència en React i Next.js' },
-        { name: 'Manel Méndez', role: 'CFO', imageUrl: '/placeholder.svg?height=96&width=96', description: 'Expert en finances i estratègia empresarial amb més de 10 anys d\'experiència' },
+        { name: 'Manel Méndez', role: 'CFO', imageUrl: '/teams/manel.png', description: 'Expert en finances i estratègia empresarial amb més de 10 anys d\'experiència' },
         { name: 'Harry White', role: 'COO', imageUrl: '/teams/harry.png', description: 'Especialista en operacions i optimització de processos empresarials' },
     ];
 
