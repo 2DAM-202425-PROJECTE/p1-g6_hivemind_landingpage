@@ -5,7 +5,6 @@ export default function ProductsContent() {
     <div className="relative flex flex-col items-start justify-start text-white hivemind-hero-section mt-10 max-w-screen-lg mx-auto">
       <div className="hero-background" />
       <div className="w-full h-full relative pt-10 text-left rounded-3xl">
-        <Link to="/" />
         <h1 className="text-4xl px-5">Productes</h1>
         <p className="mt-6 text-xl text-center w-full px-5">
           Benvingut a la nostra pàgina de productes! Aquí trobaràs una àmplia gamma de subscripcions i crèdits per personalitzar el teu perfil. Explora les nostres opcions i tria la que millor s'adapti a les teves necessitats.
@@ -29,7 +28,7 @@ export default function ProductsContent() {
             </div>
             <p className="mt-4 font-bold text-xl">Gratuït</p>
             <Link to="/Register">
-              <button className="mt-4 px-4 py-2 bg-blue-600 rounded-lg text-white">Registrat</button>
+              <button className="px-6 py-3 bg-blue-600 rounded-lg text-white">Registrat</button>
             </Link>
           </div>
           <div className="tier-card p-5 rounded-xl bg-gray-700 text-center w-full lg:w-1/3 flex flex-col items-center justify-between">
@@ -41,7 +40,7 @@ export default function ProductsContent() {
             </div>
             <p className="mt-4 font-bold text-xl">10€/mes</p>
             <Link to="/purchase?product=standard&price=10&description=Funcions avançades per una experiència millorada&features=Inclou 3 icones exclusives com a recompensa inicial, 500 crèdits mensuals, ideals per comprar fons o animacions">
-              <button className="mt-4 px-4 py-2 bg-blue-600 rounded-lg text-white">Compra ara</button>
+              <button className="px-6 py-3 bg-blue-600 rounded-lg text-white">Compra ara</button>
             </Link>
           </div>
           <div className="tier-card p-5 rounded-xl bg-gray-700 text-center w-full lg:w-1/3 flex flex-col items-center justify-between">
@@ -53,7 +52,7 @@ export default function ProductsContent() {
             </div>
             <p className="mt-4 font-bold text-xl">20€/mes</p>
             <Link to="/purchase?product=ultimate&price=20&description=Accés total a totes les funcions, icones i crèdits bonus&features=Inclou 10 icones exclusives com a recompensa inicial, 1000 crèdits mensuals + bonificacions per usuaris fidels">
-              <button className="mt-4 px-4 py-2 bg-blue-600 rounded-lg text-white">Compra ara</button>
+              <button className="px-6 py-3 bg-blue-600 rounded-lg text-white">Compra ara</button>
             </Link>
           </div>
         </div>
@@ -69,16 +68,16 @@ export default function ProductsContent() {
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-5">
             <Link to="/purchase?product=credits100&price=2&description=100 Crèdits&features=Compra de crèdits per personalitzar el teu perfil">
-              <button className="px-4 py-2 bg-green-600 rounded-lg text-white">100 Crèdits - 2€</button>
+              <button className="px-4 py-2 bg-blue-600 rounded-lg text-white">100 Crèdits - 2€</button>
             </Link>
             <Link to="/purchase?product=credits500&price=8&description=500 Crèdits&features=Compra de crèdits per personalitzar el teu perfil">
-              <button className="px-4 py-2 bg-green-600 rounded-lg text-white">500 Crèdits - 8€</button>
+              <button className="px-4 py-2 bg-blue-600 rounded-lg text-white">500 Crèdits - 8€</button>
             </Link>
             <Link to="/purchase?product=credits1000&price=15&description=1000 Crèdits&features=Compra de crèdits per personalitzar el teu perfil">
-              <button className="px-4 py-2 bg-green-600 rounded-lg text-white">1000 Crèdits - 15€</button>
+              <button className="px-4 py-2 bg-blue-600 rounded-lg text-white">1000 Crèdits - 15€</button>
             </Link>
             <Link to="/purchase?product=credits5000&price=60&description=5000 Crèdits&features=Compra de crèdits per personalitzar el teu perfil">
-              <button className="px-4 py-2 bg-green-600 rounded-lg text-white">5000 Crèdits - 60€</button>
+              <button className="px-4 py-2 bg-blue-600 rounded-lg text-white">5000 Crèdits - 60€</button>
             </Link>
           </div>
         </div>

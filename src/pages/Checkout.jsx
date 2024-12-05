@@ -29,9 +29,9 @@ export default function Checkout() {
           <strong>Descripció:</strong> {description}
         </p>
         <ul className="mt-4 text-lg text-center">
-          <strong>Característiques:</strong>
+          <li className="font-bold">Característiques:</li>
           {features?.map((feature, index) => (
-            <li key={index}>✔️ {feature}</li>
+              <li key={index}>✔️ {feature}</li>
           ))}
         </ul>
         <div className="mt-10 text-center">

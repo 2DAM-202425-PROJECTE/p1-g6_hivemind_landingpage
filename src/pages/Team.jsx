@@ -33,7 +33,7 @@ export default function TeamPage() {
                                     height={96}
                                     className="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-white object-cover"
                                 />
-                                <h3 className="text-2xl font-semibold">{member.name}</h3>
+                                <h2 className="text-2xl font-semibold">{member.name}</h2>
                                 <p className="text-lg text-gray-300">{member.role}</p>
                                 <p className="text-sm mt-2">{member.description}</p>
                             </div>
