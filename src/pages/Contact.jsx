@@ -56,7 +56,7 @@ const Contact = () => {
 
         setIsLoading(true);
 
-        emailjs.send('service_jqct0fo', 'template_cqnp0hi', sanitizedData, 'Lex0DDJSKCMoCfwwE')
+        emailjs.send('service_eeni5sd', 'template_2vuslui', sanitizedData, 'Tjq1cp43LrXoEdW8G')
             .then((response) => {
                 setSuccessMessage('El teu missatge s\'ha enviat correctament!');
                 setIsLoading(false);
